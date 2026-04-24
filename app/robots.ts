@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 
-const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://skillfit.dev";
+const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://get-skill-fit.com";
 
 export default function robots(): MetadataRoute.Robots {
   return {
@@ -11,4 +11,3 @@ export default function robots(): MetadataRoute.Robots {
     sitemap: `${baseUrl}/sitemap.xml`
   };
 }
-

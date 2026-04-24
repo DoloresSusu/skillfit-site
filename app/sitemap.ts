@@ -5,7 +5,7 @@ import { seoGuides } from "@/data/seoGuides";
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://get-skill-fit.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const staticRoutes = ["", "/use-cases", "/skills", "/arena", "/submit", "/about"].map(
+  const staticRoutes = ["", "/guides", "/use-cases", "/skills", "/arena", "/submit", "/about"].map(
     (path) => ({
       url: `${baseUrl}${path}`,
       lastModified: new Date()

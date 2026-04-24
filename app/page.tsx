@@ -64,12 +64,12 @@ export default function HomePage() {
             <span className="eyebrow">SEO / AEO guides</span>
             <h2>Answers people search for before choosing a Skill</h2>
           </div>
-          <Link className="button button-light" href="/how-to-choose-ai-skills">
-            Start with the checklist
+          <Link className="button button-light" href="/guides">
+            View all guides
           </Link>
         </div>
         <div className="grid grid-3">
-          {seoGuides.slice(0, 5).map((guide) => (
+          {seoGuides.slice(0, 6).map((guide) => (
             <GuideCard guide={guide} key={guide.slug} />
           ))}
         </div>

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { JsonLd } from "@/components/JsonLd";
 import type { SeoGuide } from "@/data/seoGuides";
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://get-skill-fit.com";
@@ -21,25 +22,69 @@ export function getSeoGuideMetadata(guide: SeoGuide): Metadata {
 }
 
 export function SeoGuidePage({ guide }: { guide: SeoGuide }) {
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: guide.faqs.map((faq) => ({
-      "@type": "Question",
-      name: faq.question,
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: faq.answer
-      }
-    }))
-  };
+  const jsonLd = [
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      headline: guide.title,
+      description: guide.description,
+      url: `${baseUrl}${guide.path}`,
+      datePublished: "2026-04-24",
+      dateModified: "2026-04-25",
+      author: {
+        "@type": "Organization",
+        name: "SkillFit",
+        url: baseUrl
+      },
+      publisher: {
+        "@type": "Organization",
+        name: "SkillFit",
+        url: baseUrl
+      },
+      about: ["AI skills", "AI agents", "task-to-skill matching", guide.shortTitle],
+      mainEntityOfPage: `${baseUrl}${guide.path}`
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: guide.faqs.map((faq) => ({
+        "@type": "Question",
+        name: faq.question,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: faq.answer
+        }
+      }))
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "SkillFit",
+          item: baseUrl
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Guides",
+          item: `${baseUrl}/guides`
+        },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: guide.title,
+          item: `${baseUrl}${guide.path}`
+        }
+      ]
+    }
+  ];
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema).replace(/</g, "\\u003c") }}
-      />
+      <JsonLd data={jsonLd} />
       <section className="page-hero guide-hero">
         <span className="eyebrow">SkillFit guide</span>
         <h1>{guide.title}</h1>
