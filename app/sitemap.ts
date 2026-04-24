@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { arenas, skills, useCases } from "@/data/content";
 
-const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://skillfit.dev";
+const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://get-skill-fit.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes = ["", "/use-cases", "/skills", "/arena", "/submit", "/about"].map(
@@ -28,4 +28,3 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return [...staticRoutes, ...useCaseRoutes, ...skillRoutes, ...arenaRoutes];
 }
-

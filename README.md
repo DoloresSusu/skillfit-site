@@ -5,7 +5,7 @@ It helps users answer one practical question:
 
 > Which AI Agent Skill should I use for this concrete task?
 
-Live site: https://skillfit-site.vercel.app
+Live site: https://get-skill-fit.com
 Submit a Skill or task: https://tally.so/r/D4X1AZ
 
 This MVP is intentionally static:

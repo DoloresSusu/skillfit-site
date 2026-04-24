@@ -4,7 +4,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://skillfit.dev"),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://get-skill-fit.com"),
   title: {
     default: "SkillFit - Find the right AI Agent Skill for your task",
     template: "%s | SkillFit"
@@ -31,4 +31,3 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     </html>
   );
 }
-
