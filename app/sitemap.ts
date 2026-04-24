@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { arenas, skills, useCases } from "@/data/content";
+import { zhRoutes } from "@/data/i18n";
 import { seoGuides } from "@/data/seoGuides";
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://get-skill-fit.com";
@@ -32,5 +33,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: new Date()
   }));
 
-  return [...staticRoutes, ...useCaseRoutes, ...skillRoutes, ...arenaRoutes, ...guideRoutes];
+  const localizedRoutes = zhRoutes.map((path) => ({
+    url: `${baseUrl}${path}`,
+    lastModified: new Date()
+  }));
+
+  return [
+    ...staticRoutes,
+    ...useCaseRoutes,
+    ...skillRoutes,
+    ...arenaRoutes,
+    ...guideRoutes,
+    ...localizedRoutes
+  ];
 }

@@ -1,11 +1,16 @@
 import type { Metadata } from "next";
 import { GuideCard } from "@/components/GuideCard";
+import { getAlternateLanguages } from "@/data/i18n";
 import { seoGuides } from "@/data/seoGuides";
 
 export const metadata: Metadata = {
   title: "AI Skill Guides",
   description:
-    "Task-first guides for choosing AI Agent Skills for research, writing, coding, SEO, product work, UI design, and agent workflows."
+    "Task-first guides for choosing AI Agent Skills for research, writing, coding, SEO, product work, UI design, and agent workflows.",
+  alternates: {
+    canonical: "/guides",
+    languages: getAlternateLanguages("/guides")
+  }
 };
 
 export default function GuidesPage() {

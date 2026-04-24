@@ -102,6 +102,22 @@ p {
   color: var(--ink);
 }
 
+.language-switch {
+  background: var(--ink);
+  border: 1px solid var(--ink) !important;
+  border-radius: 999px;
+  color: var(--paper-2) !important;
+  font-weight: 800;
+  padding: 7px 11px;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 24px;
+}
+
 .hero {
   display: grid;
   gap: 34px;

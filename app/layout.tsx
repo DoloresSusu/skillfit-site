@@ -15,6 +15,9 @@ export const metadata: Metadata = {
   },
   description:
     "SkillFit helps AI builders choose Agent Skills by task fit, evidence level, safety notes, and test packs.",
+  icons: {
+    icon: "/favicon.svg"
+  },
   alternates: {
     types: {
       "text/plain": `${baseUrl}/llms.txt`

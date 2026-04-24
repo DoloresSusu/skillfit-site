@@ -1,12 +1,5 @@
 import Link from "next/link";
-
-const navItems = [
-  { href: "/use-cases", label: "Use cases" },
-  { href: "/skills", label: "Skills" },
-  { href: "/guides", label: "Guides" },
-  { href: "/arena", label: "Arena" },
-  { href: "/submit", label: "Submit" }
-];
+import { HeaderNav } from "@/components/HeaderNav";
 
 export function SiteHeader() {
   return (
@@ -18,13 +11,7 @@ export function SiteHeader() {
           <small>Task-to-Skill Advisor</small>
         </span>
       </Link>
-      <nav className="nav-links" aria-label="Main navigation">
-        {navItems.map((item) => (
-          <Link href={item.href} key={item.href}>
-            {item.label}
-          </Link>
-        ))}
-      </nav>
+      <HeaderNav />
     </header>
   );
 }

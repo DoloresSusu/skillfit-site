@@ -5,9 +5,13 @@
 ## Canonical URLs
 
 - Homepage: https://get-skill-fit.com/
+- Chinese homepage: https://get-skill-fit.com/zh
 - Guides index: https://get-skill-fit.com/guides
+- Chinese guides index: https://get-skill-fit.com/zh/guides
 - How to choose AI skills: https://get-skill-fit.com/how-to-choose-ai-skills
+- Chinese guide: https://get-skill-fit.com/zh/how-to-choose-ai-skills
 - Skill marketplace list: https://get-skill-fit.com/ai-skill-marketplace-list
+- Chinese marketplace guide: https://get-skill-fit.com/zh/ai-skill-marketplace-list
 - Use cases: https://get-skill-fit.com/use-cases
 - Skill index: https://get-skill-fit.com/skills
 - Skill Arena: https://get-skill-fit.com/arena

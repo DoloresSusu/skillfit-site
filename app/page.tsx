@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { ArenaCard } from "@/components/ArenaCard";
 import { GuideCard } from "@/components/GuideCard";
@@ -5,7 +6,15 @@ import { SkillCard } from "@/components/SkillCard";
 import { TaskFinder } from "@/components/TaskFinder";
 import { UseCaseCard } from "@/components/UseCaseCard";
 import { arenas, skills, useCases } from "@/data/content";
+import { getAlternateLanguages } from "@/data/i18n";
 import { seoGuides } from "@/data/seoGuides";
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "/",
+    languages: getAlternateLanguages("/")
+  }
+};
 
 export default function HomePage() {
   return (

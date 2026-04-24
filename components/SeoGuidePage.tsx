@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { JsonLd } from "@/components/JsonLd";
+import { getAlternateLanguages } from "@/data/i18n";
 import type { SeoGuide } from "@/data/seoGuides";
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://get-skill-fit.com";
@@ -10,7 +11,8 @@ export function getSeoGuideMetadata(guide: SeoGuide): Metadata {
     title: guide.title,
     description: guide.description,
     alternates: {
-      canonical: guide.path
+      canonical: guide.path,
+      languages: getAlternateLanguages(guide.path)
     },
     openGraph: {
       title: `${guide.title} | SkillFit`,
@@ -21,7 +23,35 @@ export function getSeoGuideMetadata(guide: SeoGuide): Metadata {
   };
 }
 
-export function SeoGuidePage({ guide }: { guide: SeoGuide }) {
+const pageLabels = {
+  en: {
+    eyebrow: "SkillFit guide",
+    shortAnswer: "Short answer",
+    audience: "Who this guide is for",
+    recommended: "Recommended skill types",
+    checklist: "Decision checklist",
+    testPrompt: "10-minute test prompt",
+    redFlags: "Red flags",
+    related: "Related SkillFit pages",
+    aeo: "AEO answers",
+    faq: "Common questions"
+  },
+  zh: {
+    eyebrow: "SkillFit 中文指南",
+    shortAnswer: "一句话答案",
+    audience: "适合谁看",
+    recommended: "推荐 Skill 类型",
+    checklist: "判断清单",
+    testPrompt: "10 分钟测试 Prompt",
+    redFlags: "危险信号",
+    related: "相关页面",
+    aeo: "AEO 问答",
+    faq: "常见问题"
+  }
+};
+
+export function SeoGuidePage({ guide, locale = "en" }: { guide: SeoGuide; locale?: "en" | "zh" }) {
+  const labels = pageLabels[locale];
   const jsonLd = [
     {
       "@context": "https://schema.org",
@@ -42,6 +72,7 @@ export function SeoGuidePage({ guide }: { guide: SeoGuide }) {
         url: baseUrl
       },
       about: ["AI skills", "AI agents", "task-to-skill matching", guide.shortTitle],
+      inLanguage: locale === "zh" ? "zh-Hans" : "en",
       mainEntityOfPage: `${baseUrl}${guide.path}`
     },
     {
@@ -86,25 +117,25 @@ export function SeoGuidePage({ guide }: { guide: SeoGuide }) {
     <>
       <JsonLd data={jsonLd} />
       <section className="page-hero guide-hero">
-        <span className="eyebrow">SkillFit guide</span>
+        <span className="eyebrow">{labels.eyebrow}</span>
         <h1>{guide.title}</h1>
         <p className="lead">{guide.description}</p>
         <div className="answer-box">
-          <strong>Short answer</strong>
+          <strong>{labels.shortAnswer}</strong>
           <p>{guide.answer}</p>
         </div>
       </section>
 
       <section className="guide-layout">
         <article className="panel guide-main">
-          <h2>Who this guide is for</h2>
+          <h2>{labels.audience}</h2>
           <ul className="check-list">
             {guide.audience.map((item) => (
               <li key={item}>{item}</li>
             ))}
           </ul>
 
-          <h2>Recommended skill types</h2>
+          <h2>{labels.recommended}</h2>
           <div className="guide-stack">
             {guide.recommendedSkillTypes.map((skillType) => (
               <div className="guide-row" key={skillType.name}>
@@ -114,26 +145,26 @@ export function SeoGuidePage({ guide }: { guide: SeoGuide }) {
             ))}
           </div>
 
-          <h2>Decision checklist</h2>
+          <h2>{labels.checklist}</h2>
           <ol className="number-list">
             {guide.decisionChecklist.map((item) => (
               <li key={item}>{item}</li>
             ))}
           </ol>
 
-          <h2>10-minute test prompt</h2>
+          <h2>{labels.testPrompt}</h2>
           <div className="prompt-box">{guide.testPrompt}</div>
         </article>
 
         <aside className="panel guide-sidebar">
-          <h2>Red flags</h2>
+          <h2>{labels.redFlags}</h2>
           <ul className="plain-list">
             {guide.redFlags.map((item) => (
               <li key={item}>{item}</li>
             ))}
           </ul>
 
-          <h2>Related SkillFit pages</h2>
+          <h2>{labels.related}</h2>
           <div className="link-stack">
             {guide.relatedLinks.map((link) => (
               <Link href={link.href} key={link.href}>
@@ -145,8 +176,8 @@ export function SeoGuidePage({ guide }: { guide: SeoGuide }) {
       </section>
 
       <section className="panel faq-panel">
-        <span className="eyebrow">AEO answers</span>
-        <h2>Common questions</h2>
+        <span className="eyebrow">{labels.aeo}</span>
+        <h2>{labels.faq}</h2>
         <div className="faq-grid">
           {guide.faqs.map((faq) => (
             <article key={faq.question}>
