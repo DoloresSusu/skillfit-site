@@ -3,6 +3,7 @@ import Link from "next/link";
 const navItems = [
   { href: "/use-cases", label: "Use cases" },
   { href: "/skills", label: "Skills" },
+  { href: "/how-to-choose-ai-skills", label: "Guides" },
   { href: "/arena", label: "Arena" },
   { href: "/submit", label: "Submit" }
 ];
@@ -27,4 +28,3 @@ export function SiteHeader() {
     </header>
   );
 }
-

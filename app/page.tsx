@@ -1,9 +1,11 @@
 import Link from "next/link";
 import { ArenaCard } from "@/components/ArenaCard";
+import { GuideCard } from "@/components/GuideCard";
 import { SkillCard } from "@/components/SkillCard";
 import { TaskFinder } from "@/components/TaskFinder";
 import { UseCaseCard } from "@/components/UseCaseCard";
 import { arenas, skills, useCases } from "@/data/content";
+import { seoGuides } from "@/data/seoGuides";
 
 export default function HomePage() {
   return (
@@ -56,6 +58,23 @@ export default function HomePage() {
         </div>
       </section>
 
+      <section className="section guide-section">
+        <div className="section-heading">
+          <div>
+            <span className="eyebrow">SEO / AEO guides</span>
+            <h2>Answers people search for before choosing a Skill</h2>
+          </div>
+          <Link className="button button-light" href="/how-to-choose-ai-skills">
+            Start with the checklist
+          </Link>
+        </div>
+        <div className="grid grid-3">
+          {seoGuides.slice(0, 5).map((guide) => (
+            <GuideCard guide={guide} key={guide.slug} />
+          ))}
+        </div>
+      </section>
+
       <section className="section">
         <div className="section-heading">
           <h2>Evidence cards</h2>
@@ -98,4 +117,3 @@ export default function HomePage() {
     </>
   );
 }
-
