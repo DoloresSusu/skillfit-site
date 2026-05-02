@@ -4,7 +4,8 @@ import { useCases } from "@/data/content";
 
 export const metadata: Metadata = {
   title: "Use cases",
-  description: "Browse task-first Skill recommendations and test packs."
+  description:
+    "Browse task-first AI Agent Skill recommendations for PMs, creators, founders, teams, and AI builders."
 };
 
 export default function UseCasesPage() {
@@ -14,8 +15,8 @@ export default function UseCasesPage() {
         <span className="eyebrow">Task library</span>
         <h1>Choose by job-to-be-done, not by marketplace rank.</h1>
         <p className="lead">
-          Each use case explains what the task needs, which Skills fit, how to test
-          them, and when to avoid them.
+          Each use case explains the job to be done, which Skills fit, how to test
+          them in 10 minutes, and when to avoid them.
         </p>
       </section>
       <section className="grid grid-2">
@@ -26,4 +27,3 @@ export default function UseCasesPage() {
     </>
   );
 }
-

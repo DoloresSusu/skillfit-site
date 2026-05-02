@@ -402,6 +402,7 @@ export const seoGuides: SeoGuide[] = [
     ],
     relatedLinks: [
       { href: "/best-ai-skills-for-research", label: "Research skill guide" },
+      { href: "/skills/web-access", label: "web-access skill card" },
       { href: "/use-cases/best-skill-for-research-report", label: "Research report use case" },
       { href: "/submit", label: "Submit a competitor case" }
     ],

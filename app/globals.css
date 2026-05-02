@@ -220,6 +220,31 @@ p {
   padding: 16px 18px;
 }
 
+.task-chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.task-chip-row button {
+  background: rgba(255, 253, 246, 0.82);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--moss-dark);
+  cursor: pointer;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 800;
+  padding: 8px 12px;
+  transition: border-color 160ms ease, color 160ms ease;
+}
+
+.task-chip-row button:hover {
+  border-color: var(--clay);
+  color: var(--ink);
+}
+
 .button {
   align-items: center;
   border-radius: 999px;

@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
+import { TrackedAnchor } from "@/components/TrackedLink";
 
 export const metadata: Metadata = {
   title: "Submit a Skill or task",
-  description: "Submit a Skill link, task, output sample, or Arena idea to SkillFit."
+  description:
+    "Submit a Skill link, real task, output sample, or failure case to help SkillFit validate task-to-Skill recommendations."
 };
 
 const submitUrl = process.env.NEXT_PUBLIC_SUBMIT_URL || "https://tally.so/r/D4X1AZ";
@@ -12,10 +14,11 @@ export default function SubmitPage() {
     <>
       <section className="page-hero">
         <span className="eyebrow">Submit</span>
-        <h1>Help build the task-to-Skill evidence layer.</h1>
+        <h1>Send the task evidence SkillFit needs.</h1>
         <p className="lead">
-          First version is manually curated. Send a Skill link, a task, a real output
-          sample, or a duel you want to see.
+          The first version is manually curated. Send a concrete task, a Skill source,
+          a real output sample, or a failure case so we can turn demand into better
+          Skill pages.
         </p>
       </section>
 
@@ -23,20 +26,26 @@ export default function SubmitPage() {
         <div className="panel">
           <h2>What to submit</h2>
           <ul className="check-list">
-            <li>A Skill marketplace URL or GitHub repo</li>
-            <li>The task you want to complete</li>
-            <li>What good output looks like</li>
-            <li>Any failure cases or safety concerns</li>
+            <li>The task you are trying to complete</li>
+            <li>The AI agent you use, such as Codex, Claude Code, Cursor, or ChatGPT</li>
+            <li>A Skill marketplace URL, GitHub repo, or install/source note</li>
+            <li>What good output looks like, plus what failed if you already tried it</li>
           </ul>
-          <a href={submitUrl} className="button button-dark">
+          <TrackedAnchor
+            href={submitUrl}
+            className="button button-dark"
+            eventName="submit_clicked"
+            eventProperties={{ location: "submit_page", destination: "tally" }}
+          >
             Open submission form
-          </a>
+          </TrackedAnchor>
         </div>
         <aside className="panel">
-          <h2>Why no account yet?</h2>
+          <h2>Why Tally for now?</h2>
           <p>
-            The MVP avoids login and database complexity until there is enough real
-            submission volume. If this gets traction, submissions move to Supabase.
+            At this stage, a form is enough to validate whether visitors have real
+            tasks, real Skill sources, and real output samples. A database and account
+            system should wait until submission volume justifies the extra product cost.
           </p>
         </aside>
       </section>

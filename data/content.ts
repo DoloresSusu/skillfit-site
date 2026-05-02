@@ -266,15 +266,67 @@ export const skills: Skill[] = [
   {
     slug: "web-access",
     name: "web-access",
-    tagline: "Researches live web pages, dynamic sites, and current sources.",
+    tagline:
+      "Researches live web pages, dynamic sites, and current sources for decision-ready work.",
     category: "Research",
     platform: "Codex Skill",
     sourceUrl: "/submit",
-    installCommand: "Requires browser or web tool access",
+    installCommand: "Enable a browser-capable agent environment, then run the Skill on a concrete research task.",
+    sourceStatus: "Runtime dependent",
+    lastVerified: "2026-04-30",
+    supportedAgents: ["Codex", "Browser-capable coding agents", "Local AI agent workflows"],
+    installMethods: [
+      "Agent skill manager",
+      "Local skill file",
+      "Manual workflow import"
+    ],
     evidenceLevel: "B",
     safetyLevel: "medium",
-    bestFor: ["Current research", "Competitor discovery", "Source reading"],
-    notFor: ["Offline-only workflows"],
+    bestFor: [
+      "Current research",
+      "Competitor discovery",
+      "Source reading",
+      "Market and product memos"
+    ],
+    notFor: [
+      "Offline-only workflows",
+      "Private account research without explicit permission",
+      "Final legal, medical, financial, or compliance decisions"
+    ],
+    audienceNotes: [
+      "PMs and founders validating a market, competitor set, or product angle",
+      "Creators turning scattered sources into a sourced article or thread",
+      "Independent builders who need current docs, pricing, or ecosystem facts before coding"
+    ],
+    evidenceNotes: [
+      "Google Search Console is already surfacing this page for web-access skill queries, making it the strongest early SEO validation target.",
+      "The Skill is best validated on tasks where freshness matters: competitor research, pricing checks, product docs, and source-backed summaries.",
+      "Evidence level should move from B to A only after SkillFit collects public output samples and repeatable test results."
+    ],
+    safetyNotes: [
+      "Live web pages change, so important claims should include source links and a retrieval date.",
+      "Do not enter secrets, private customer data, or paid-account information unless the runtime and permissions are trusted.",
+      "For high-stakes topics, use web-access to gather sources, then require human review before acting."
+    ],
+    usagePrompt:
+      "Research whether a task-to-Skill recommendation site already exists. Find current competitors, cite sources, separate direct competitors from substitutes, and end with the most defensible product gap.",
+    faqs: [
+      {
+        question: "What is web-access best for?",
+        answer:
+          "web-access is best for AI agent tasks that need current web sources, dynamic pages, competitor discovery, or source-backed research."
+      },
+      {
+        question: "When should I avoid web-access?",
+        answer:
+          "Avoid it when the task is offline, when browsing private accounts would expose sensitive data, or when a high-stakes answer needs expert review."
+      },
+      {
+        question: "How do I test web-access quickly?",
+        answer:
+          "Give it a current research task, require source links, ask it to state uncertainty, then verify whether the links and recommendation match."
+      }
+    ],
     fitMap: [
       {
         useCaseSlug: "best-skill-for-research-report",
@@ -736,4 +788,3 @@ export function getArenaSkills(arena: Arena) {
     skillB: getSkill(arena.skillB)
   };
 }
-

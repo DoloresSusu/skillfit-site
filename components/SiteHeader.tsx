@@ -8,7 +8,7 @@ export function SiteHeader() {
         <span className="brand-mark">SF</span>
         <span>
           <strong>SkillFit</strong>
-          <small>Task-to-Skill Advisor</small>
+          <small>Task-fit Skill Advisor</small>
         </span>
       </Link>
       <HeaderNav />

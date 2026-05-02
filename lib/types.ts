@@ -10,10 +10,22 @@ export type Skill = {
   platform: string;
   sourceUrl: string;
   installCommand: string;
+  sourceStatus?: "Verified" | "Community submitted" | "Needs public source" | "Runtime dependent";
+  lastVerified?: string;
+  supportedAgents?: string[];
+  installMethods?: string[];
   evidenceLevel: EvidenceLevel;
   safetyLevel: SafetyLevel;
   bestFor: string[];
   notFor: string[];
+  audienceNotes?: string[];
+  evidenceNotes?: string[];
+  safetyNotes?: string[];
+  usagePrompt?: string;
+  faqs?: Array<{
+    question: string;
+    answer: string;
+  }>;
   fitMap: Array<{
     useCaseSlug: string;
     label: "Recommended" | "Consider" | "Not enough data" | "Avoid";
@@ -50,4 +62,3 @@ export type Arena = {
   verdict: string;
   status: "Draft" | "Published";
 };
-

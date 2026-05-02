@@ -1,6 +1,6 @@
-import Link from "next/link";
 import type { Skill } from "@/lib/types";
 import { EvidenceBadge, SafetyBadge } from "@/components/EvidenceBadge";
+import { TrackedLink } from "@/components/TrackedLink";
 
 export function SkillCard({ skill }: { skill: Skill }) {
   return (
@@ -10,7 +10,17 @@ export function SkillCard({ skill }: { skill: Skill }) {
         <span>{skill.platform}</span>
       </div>
       <h3>
-        <Link href={`/skills/${skill.slug}`}>{skill.name}</Link>
+        <TrackedLink
+          href={`/skills/${skill.slug}`}
+          eventName="skill_card_clicked"
+          eventProperties={{
+            skill: skill.slug,
+            category: skill.category,
+            evidence_level: skill.evidenceLevel
+          }}
+        >
+          {skill.name}
+        </TrackedLink>
       </h3>
       <p>{skill.tagline}</p>
       <div className="badge-row">
@@ -25,4 +35,3 @@ export function SkillCard({ skill }: { skill: Skill }) {
     </article>
   );
 }
-

@@ -1,14 +1,15 @@
 # SkillFit
 
 SkillFit is an open-source task-to-Skill advisor and lightweight Skill Arena.
-It helps users answer one practical question:
+It helps PMs, creators, founders, teams, and AI builders answer one practical
+question:
 
 > Which AI Agent Skill should I use for this concrete task?
 
 Live site: https://get-skill-fit.com
 Submit a Skill or task: https://tally.so/r/D4X1AZ
 
-This MVP is intentionally static:
+This MVP is intentionally static and validation-first:
 
 - Next.js App Router
 - Local curated data in `data/content.ts`
@@ -16,6 +17,8 @@ This MVP is intentionally static:
 - No login
 - No admin panel
 - Submit page points to a Tally form
+- Vercel Analytics for traffic
+- Optional PostHog Free tracking for high-intent product events
 
 ## Why This Exists
 
@@ -63,7 +66,12 @@ Deploy to Vercel and set:
 ```text
 NEXT_PUBLIC_SITE_URL=https://your-domain.example
 NEXT_PUBLIC_SUBMIT_URL=https://your-tally-form.example
+NEXT_PUBLIC_POSTHOG_KEY=phc_xxx
+NEXT_PUBLIC_POSTHOG_HOST=https://us.i.posthog.com
 ```
+
+If `NEXT_PUBLIC_POSTHOG_KEY` is not set, PostHog does not load and the site
+continues to work normally.
 
 ## License
 

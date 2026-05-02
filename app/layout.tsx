@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/next";
 import { JsonLd } from "@/components/JsonLd";
+import { PostHogPageView } from "@/components/PostHogPageView";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import "./globals.css";
@@ -14,7 +15,7 @@ export const metadata: Metadata = {
     template: "%s | SkillFit"
   },
   description:
-    "SkillFit helps AI builders choose Agent Skills by task fit, evidence level, safety notes, and test packs.",
+    "SkillFit helps PMs, creators, founders, teams, and AI builders choose Agent Skills by task fit, evidence, safety notes, and test packs.",
   icons: {
     icon: "/favicon.svg"
   },
@@ -38,7 +39,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       name: "SkillFit",
       url: baseUrl,
       description:
-        "SkillFit helps AI builders choose Agent Skills by task fit, evidence level, safety notes, and test packs.",
+        "SkillFit helps PMs, creators, founders, teams, and AI builders choose Agent Skills by task fit, evidence, safety notes, and test packs.",
       inLanguage: "en",
       potentialAction: {
         "@type": "SearchAction",
@@ -65,6 +66,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <main>{children}</main>
           <SiteFooter />
         </div>
+        <PostHogPageView />
         <Analytics />
       </body>
     </html>
