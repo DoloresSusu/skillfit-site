@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/next";
+import { EngagementTracker } from "@/components/EngagementTracker";
 import { JsonLd } from "@/components/JsonLd";
 import { PostHogPageView } from "@/components/PostHogPageView";
 import { ScrollDepthTracker } from "@/components/ScrollDepthTracker";
@@ -69,6 +70,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <SiteFooter />
         </div>
         <PostHogPageView />
+        <EngagementTracker />
         <ScrollDepthTracker />
         <Analytics />
       </body>

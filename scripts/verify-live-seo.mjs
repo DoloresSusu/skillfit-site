@@ -10,13 +10,14 @@ const pages = [
   },
   {
     path: "/skills",
-    title: "AI Skill Directory and Evidence Cards | SkillFit",
-    descriptionIncludes: "Browse an AI skill directory",
-    h1: "AI Skill directory before you install another Skill.",
+    title: "AI Skill Directory: Reviews and Evidence Cards | SkillFit",
+    descriptionIncludes: "Browse AI skill reviews",
+    h1: "AI Skill Directory: reviews before you install another Skill.",
     bodyIncludes: [
       "Priority comparisons",
       "web-access",
       "ui-ux-pro-max",
+      "lark-minutes",
       "Skill Review",
       "What is an AI skill directory?"
     ]
@@ -40,14 +41,23 @@ const pages = [
     title: "Best AI Researcher Skills for Web Research | SkillFit",
     descriptionIncludes: "Compare AI researcher skills",
     h1: "Best AI Researcher Skills for Web Research",
-    bodyIncludes: ["Which AI researcher skills should I look for?", "web-access skill card"]
+    bodyIncludes: [
+      "Which AI researcher skills should I look for?",
+      "Is web-access an AI researcher skill?",
+      "web-access skill card",
+      "AI skill marketplace list"
+    ]
   },
   {
     path: "/ai-skill-marketplace-list",
     title: "AI Skill Marketplace List and Directory | SkillFit",
     descriptionIncludes: "AI skill marketplace options",
     h1: "AI Skill Marketplace List and Directory",
-    bodyIncludes: ["What is an AI skill marketplace?", "SkillFit skill index"]
+    bodyIncludes: [
+      "What is an AI skill marketplace?",
+      "Where can I find AI agent skills?",
+      "SkillFit skill index"
+    ]
   },
   {
     path: "/best-ai-skill-for-competitive-analysis",

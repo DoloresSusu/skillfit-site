@@ -60,7 +60,7 @@ export function SeoGuidePage({ guide, locale = "en" }: { guide: SeoGuide; locale
       description: guide.description,
       url: `${baseUrl}${guide.path}`,
       datePublished: "2026-04-24",
-      dateModified: "2026-04-25",
+      dateModified: "2026-07-03",
       author: {
         "@type": "Organization",
         name: "SkillFit",

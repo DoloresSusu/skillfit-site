@@ -78,6 +78,8 @@ export const seoGuides: SeoGuide[] = [
     relatedLinks: [
       { href: "/use-cases/best-skill-for-research-report", label: "Research report use case" },
       { href: "/skills/web-access", label: "web-access skill card" },
+      { href: "/best-ai-skill-for-competitive-analysis", label: "Competitor gap analysis guide" },
+      { href: "/ai-skill-marketplace-list", label: "AI skill marketplace list" },
       { href: "/submit", label: "Submit a research result" }
     ],
     faqs: [
@@ -100,6 +102,16 @@ export const seoGuides: SeoGuide[] = [
         question: "How should I test a research skill?",
         answer:
           "Give it a current topic, ask for sources and competitors, then check whether the links are real and the recommendation follows from the evidence."
+      },
+      {
+        question: "Is web-access an AI researcher skill?",
+        answer:
+          "web-access is best treated as a live web research skill when the job needs current sources, competitor discovery, dynamic pages, or cited summaries."
+      },
+      {
+        question: "Which AI researcher skill should I use for competitor research?",
+        answer:
+          "Use a web research skill first to find current competitors, then pair it with a synthesis skill that groups evidence into gaps, risks, and recommendations."
       }
     ]
   },
@@ -239,7 +251,7 @@ export const seoGuides: SeoGuide[] = [
     title: "AI Skill Marketplace List and Directory",
     shortTitle: "Skill Marketplace",
     description:
-      "A practical map of AI skill marketplace options, directories, platforms, GitHub repositories, GPTs, plugins, and workflow packs.",
+      "Find AI skill marketplace options, directories, platforms, GitHub repositories, GPTs, plugins, workflow packs, and task-based skill reviews.",
     answer:
       "There is no single AI skill marketplace. AI skills are distributed across agent platforms, GitHub repositories, model ecosystems, plugin directories, and community posts.",
     audience: [
@@ -277,6 +289,9 @@ export const seoGuides: SeoGuide[] = [
     ],
     relatedLinks: [
       { href: "/skills", label: "SkillFit skill index" },
+      { href: "/how-to-choose-ai-skills", label: "How to choose AI skills" },
+      { href: "/best-ai-skills-for-research", label: "AI researcher skills guide" },
+      { href: "/best-ai-skill-for-competitive-analysis", label: "Competitor analysis skill guide" },
       { href: "/arena", label: "Skill Arena duels" },
       { href: "/submit", label: "Submit a marketplace or skill" }
     ],
@@ -300,6 +315,11 @@ export const seoGuides: SeoGuide[] = [
         question: "What should a marketplace list include?",
         answer:
           "It should include source, platform, install path, task fit, evidence level, and examples of real output."
+      },
+      {
+        question: "Where can I find AI agent skills?",
+        answer:
+          "Start with task-based directories, product-specific skill libraries, GitHub repositories, GPT/plugin directories, and community lists, then verify source quality before installing."
       }
     ]
   },
@@ -414,6 +434,7 @@ export const seoGuides: SeoGuide[] = [
     relatedLinks: [
       { href: "/best-ai-skills-for-research", label: "Research skill guide" },
       { href: "/skills/web-access", label: "web-access skill card" },
+      { href: "/ai-skill-marketplace-list", label: "AI skill marketplace list" },
       { href: "/use-cases/best-skill-for-research-report", label: "Research report use case" },
       { href: "/submit", label: "Submit a competitor case" }
     ],

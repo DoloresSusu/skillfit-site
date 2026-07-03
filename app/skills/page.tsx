@@ -7,16 +7,16 @@ import { skills } from "@/data/content";
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://get-skill-fit.com";
 
 export const metadata: Metadata = {
-  title: "AI Skill Directory and Evidence Cards",
+  title: "AI Skill Directory: Reviews and Evidence Cards",
   description:
-    "Browse an AI skill directory with task fit, supported workflows, safety notes, evidence levels, and 10-minute validation prompts.",
+    "Browse AI skill reviews for web-access, ui-ux-pro-max, lark-minutes, research, UI design, writing, safety notes, and 10-minute validation prompts.",
   alternates: {
     canonical: "/skills"
   },
   openGraph: {
-    title: "AI Skill Directory and Evidence Cards | SkillFit",
+    title: "AI Skill Directory: Reviews and Evidence Cards | SkillFit",
     description:
-      "Browse an AI skill directory with task fit, supported workflows, safety notes, evidence levels, and 10-minute validation prompts.",
+      "Browse AI skill reviews for web-access, ui-ux-pro-max, lark-minutes, research, UI design, writing, safety notes, and 10-minute validation prompts.",
     url: `${baseUrl}/skills`,
     type: "website"
   }
@@ -56,7 +56,7 @@ export default function SkillsPage() {
     {
       "@context": "https://schema.org",
       "@type": "CollectionPage",
-      name: "AI Skill Directory and Evidence Cards",
+      name: "AI Skill Directory: Reviews and Evidence Cards",
       description: metadata.description,
       url: `${baseUrl}/skills`,
       mainEntity: {
@@ -106,7 +106,7 @@ export default function SkillsPage() {
       <JsonLd data={jsonLd} />
       <section className="page-hero">
         <span className="eyebrow">Skill index</span>
-        <h1>AI Skill directory before you install another Skill.</h1>
+        <h1>AI Skill Directory: reviews before you install another Skill.</h1>
         <p className="lead">
           Each evidence card translates technical Skill details into the questions
           working users ask before choosing from a fragmented skills marketplace:

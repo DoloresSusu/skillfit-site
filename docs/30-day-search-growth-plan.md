@@ -201,7 +201,10 @@ Track:
 Track these without storing sensitive text:
 
 - `$pageview` with path, pathname, referrer, UTM fields, landing path, and page type.
-- Internal click with source path, target path, link text, and section when available.
+- `$pageview` with anonymous `session_id`, first-touch UTM fields, first-touch referrer, traffic channel, landing traffic channel, device type, browser language, and timezone.
+- `link_clicked` for all site links, including header, footer, nav, cards, related links, source links, and outbound destinations.
+- Specific internal click events with source path, target path, link text, and section when available.
+- `page_engagement` snapshots on route change or tab hide with time on page, active time, max scroll, click count, first click target, last click target, and no-click status.
 - Scroll depth at 50% and 90%.
 - Submit clicks by location.
 - Source/install clicks by skill slug.
@@ -214,6 +217,21 @@ This allows analysis of:
 - Which pages fail to get an internal click.
 - Which pages are read but not acted on.
 - Which search intents create submit/source-click behavior.
+
+PostHog insight recipes:
+
+- No-click organic landing pages: filter `page_engagement` where `landing_traffic_channel = organic_search` and `no_click = true`, then break down by `pathname`.
+- Organic next-click map: filter `link_clicked` where `landing_traffic_channel = organic_search`, then break down by `pathname` and `target_path`.
+- Read-but-no-action pages: filter `page_engagement` where `max_scroll_percent >= 90`, `no_click = true`, and `active_time_ms >= 15000`.
+- Weak first screen pages: filter `page_engagement` where `max_scroll_percent < 50`, `no_click = true`, and `time_on_page_ms < 15000`.
+- AI referral monitoring: filter pageviews and link clicks where `landing_traffic_channel = ai_referral`, then break down by `landing_referrer_domain`.
+- Device behavior: compare `page_engagement` and `link_clicked` by `device_type`; if mobile has low max scroll or low click rate, improve first-screen CTA and card density.
+
+Trace limits:
+
+- Google Search Console can trace query, page, country, device, date, impressions, clicks, CTR, and average position, but it does not expose identifiable users or exact user journeys.
+- PostHog can trace anonymous sessions, referrer, UTM, landing path, internal next clicks, outbound clicks, scroll depth, and engagement buckets.
+- User profile should be inferred as anonymous cohorts from search intent, device, country, browser language, timezone, landing page, and behavior; do not attempt to identify a person from search traffic.
 
 ## 30-Day Execution Calendar
 
@@ -282,6 +300,7 @@ Production is not updated until all of these are true:
 - Vercel production deployment is built from that commit or a later commit.
 - `npm run verify:live-seo` passes against `https://get-skill-fit.com`.
 - The homepage contains `High-intent searches`.
+- `/skills` has the title `AI Skill Directory: Reviews and Evidence Cards | SkillFit`.
 - `/skills/web-access` has the title `web-access Skill Review: Live Web Research and Dynamic Pages | SkillFit`.
 - `/use-cases/best-skill-for-wechat-article-rewrite` has the title `Best AI Skill for WeChat Article Insights | SkillFit`.
 - `/use-cases/best-skill-for-frontend-landing-page` has the title `Best AI Skill for Frontend Landing Pages | SkillFit`.
@@ -321,7 +340,7 @@ Shipped in the current local change set:
 
 - Homepage title, description, H1, and category language now target `SkillFit`, `Skill Fit`, `AI Skill Finder`, and `AI Agent Skill Directory`.
 - Homepage now includes a high-intent search section linking to pages Google is already testing: `web-access skill review`, `ui ux pro max skill`, `AI researcher skills`, `AI skill marketplace list`, `AI competitor gap analysis agent`, and `frontend-design vs ui-ux-pro-max`.
-- `/skills` now has `AI Skill Directory and Evidence Cards` metadata plus a priority comparisons block for the pages most likely to move in 30 days.
+- `/skills` now has `AI Skill Directory: Reviews and Evidence Cards` metadata plus a priority comparisons block for the pages most likely to move in 30 days.
 - Skill detail pages now support per-skill SEO titles and descriptions, and render `Skill Review` in the H1.
 - `web-access`, `ui-ux-pro-max`, `frontend-design`, and `implement-design` have stronger query-matched skill metadata.
 - Research, marketplace, competitive-analysis, UI-design, and WeChat use-case content now includes language from actual GSC query clusters.
@@ -335,6 +354,9 @@ Shipped in the current local change set:
 - `dreamina-cli` now targets Dreamina CLI image/video generation, batch prompts, saved output references, and quick validation workflows.
 - `lark-calendar` now targets Lark Calendar events, freebusy, attendee management, and availability workflows.
 - `/skills`, `/guides`, `/use-cases`, and `/arena` now include CollectionPage, ItemList, FAQPage, and BreadcrumbList structured data so Google can read the site as a task-to-skill directory instead of isolated cards.
+- The analytics layer now captures anonymous first-touch attribution, traffic channel, device context, global link clicks, and page engagement snapshots so no-click organic sessions can be diagnosed by landing page and next-click path.
+- `/skills` now has a more click-oriented directory title and description that includes the high-impression skill names `web-access`, `ui-ux-pro-max`, and `lark-minutes`.
+- Research, marketplace, and competitive-analysis guides now include stronger cross-links and FAQ coverage for `AI researcher skill`, `web-access`, `AI agent skills`, and skill marketplace queries.
 
 Still needs deployment and external verification:
 

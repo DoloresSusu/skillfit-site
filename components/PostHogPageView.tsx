@@ -9,8 +9,11 @@ function getPageType(pathname: string) {
   if (pathname === "/skills") return "skill_index";
   if (pathname.startsWith("/skills/")) return "skill_detail";
   if (pathname === "/guides") return "guide_index";
+  if (pathname === "/use-cases") return "use_case_index";
   if (pathname.startsWith("/use-cases/")) return "use_case";
+  if (pathname === "/arena") return "arena_index";
   if (pathname.startsWith("/arena/")) return "arena_detail";
+  if (pathname === "/ai-skill-marketplace-list") return "marketplace_guide";
   if (pathname.startsWith("/zh/")) return "localized";
   return "guide_or_static";
 }
