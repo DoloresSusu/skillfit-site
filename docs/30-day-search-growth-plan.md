@@ -290,7 +290,8 @@ The less likely one-month outcome:
 2. Submit sitemap in Search Console after deployment.
 3. Request indexing for the 5 priority pages.
 4. Review GSC on 2026-07-10 and compare against this baseline.
-5. Use PostHog to inspect landing-source paths and internal next clicks.
+5. Run `npm run analyze:gsc -- /path/to/Search-Console-export.zip` after each Search Console export to rank the next CTR rewrite and content-depth candidates.
+6. Use PostHog to inspect landing-source paths and internal next clicks.
 
 ## Deployment Gate
 
@@ -304,6 +305,10 @@ Production is not updated until all of these are true:
 - `/skills/web-access` has the title `web-access Skill Review: Live Web Research and Dynamic Pages | SkillFit`.
 - `/use-cases/best-skill-for-wechat-article-rewrite` has the title `Best AI Skill for WeChat Article Insights | SkillFit`.
 - `/use-cases/best-skill-for-frontend-landing-page` has the title `Best AI Skill for Frontend Landing Pages | SkillFit`.
+- `/best-ai-skills-for-writing` has the title `Best AI Writing Skills for Articles and Copy | SkillFit`.
+- `/best-ai-skills-for-coding` has the title `Best AI Coding Skills for Code Review and Frontend | SkillFit`.
+- `/how-to-choose-ai-skills` has the title `How to Choose AI Skills by Task Fit | SkillFit`.
+- `/skills/implement-design` has the title `implement-design Skill Review: Figma to Code and Design Implementation | SkillFit`.
 - `/skills/lark-minutes` has the title `lark-minutes Skill Review: Lark Meeting Minutes and Action Items | SkillFit`.
 - `/arena/frontend-design-vs-ui-ux-pro-max-landing-page` has the title `frontend-design vs ui-ux-pro-max: Landing Page Skill Comparison | SkillFit`.
 - `/skills/dreamina-cli` has the title `dreamina-cli Skill Review: Dreamina CLI Image and Video Generation | SkillFit`.
@@ -339,7 +344,7 @@ Manual GitHub Actions fallback:
 Shipped in the current local change set:
 
 - Homepage title, description, H1, and category language now target `SkillFit`, `Skill Fit`, `AI Skill Finder`, and `AI Agent Skill Directory`.
-- Homepage now includes a high-intent search section linking to pages Google is already testing: `web-access skill review`, `ui ux pro max skill`, `AI researcher skills`, `AI skill marketplace list`, `AI competitor gap analysis agent`, and `frontend-design vs ui-ux-pro-max`.
+- Homepage now includes a high-intent search section linking to pages Google is already testing: `web-access skill review`, `ui ux pro max skill`, `AI researcher skills`, `AI writing skills`, `AI coding skills`, `AI skill marketplace list`, `AI competitor gap analysis agent`, `frontend-design vs ui-ux-pro-max`, and `implement-design skill`.
 - `/skills` now has `AI Skill Directory: Reviews and Evidence Cards` metadata plus a priority comparisons block for the pages most likely to move in 30 days.
 - Skill detail pages now support per-skill SEO titles and descriptions, and render `Skill Review` in the H1.
 - `web-access`, `ui-ux-pro-max`, `frontend-design`, and `implement-design` have stronger query-matched skill metadata.
@@ -357,6 +362,9 @@ Shipped in the current local change set:
 - The analytics layer now captures anonymous first-touch attribution, traffic channel, device context, global link clicks, and page engagement snapshots so no-click organic sessions can be diagnosed by landing page and next-click path.
 - `/skills` now has a more click-oriented directory title and description that includes the high-impression skill names `web-access`, `ui-ux-pro-max`, and `lark-minutes`.
 - Research, marketplace, and competitive-analysis guides now include stronger cross-links and FAQ coverage for `AI researcher skill`, `web-access`, `AI agent skills`, and skill marketplace queries.
+- Writing, coding, and choose-guide pages now target Search Console query clusters around `AI writing skills`, `AI skills for coding`, and validation-oriented skill selection.
+- `implement-design` now targets the exact `implement design`, `design implement`, and `Figma to code` cluster with stronger metadata, FAQ, audience notes, safety notes, and a 10-minute implementation prompt.
+- `scripts/analyze-gsc-export.mjs` and `npm run analyze:gsc` now turn weekly Search Console exports into ranked CTR rewrite, content-depth, authority-link, country, and device opportunities.
 
 Still needs deployment and external verification:
 

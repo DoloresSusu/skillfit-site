@@ -6,7 +6,14 @@ const pages = [
     title: "SkillFit: AI Skill Finder and Agent Skill Directory",
     descriptionIncludes: "Find the right AI agent skill by task",
     h1: "Find the right AI Skill for your task.",
-    bodyIncludes: ["High-intent searches", "web-access skill review", "AI competitor gap analysis agent"]
+    bodyIncludes: [
+      "High-intent searches",
+      "web-access skill review",
+      "AI competitor gap analysis agent",
+      "AI writing skills",
+      "AI coding skills",
+      "implement-design skill"
+    ]
   },
   {
     path: "/skills",
@@ -37,6 +44,17 @@ const pages = [
     bodyIncludes: ["Best fit", "UI UX Pro Max skill selection", "When should I use ui-ux-pro-max"]
   },
   {
+    path: "/skills/implement-design",
+    title: "implement-design Skill Review: Figma to Code and Design Implementation | SkillFit",
+    descriptionIncludes: "Review the implement-design skill",
+    h1: "implement-design Skill Review",
+    bodyIncludes: [
+      "Best fit",
+      "Design implementation",
+      "What is implement-design best for?"
+    ]
+  },
+  {
     path: "/best-ai-skills-for-research",
     title: "Best AI Researcher Skills for Web Research | SkillFit",
     descriptionIncludes: "Compare AI researcher skills",
@@ -45,6 +63,38 @@ const pages = [
       "Which AI researcher skills should I look for?",
       "Is web-access an AI researcher skill?",
       "web-access skill card",
+      "AI skill marketplace list"
+    ]
+  },
+  {
+    path: "/best-ai-skills-for-writing",
+    title: "Best AI Writing Skills for Articles and Copy | SkillFit",
+    descriptionIncludes: "Compare AI writing skills",
+    h1: "Best AI Writing Skills for Articles and Copy",
+    bodyIncludes: [
+      "What are the best AI writing skills?",
+      "Which AI writing skill should I use for WeChat articles?",
+      "marketing-psychology skill card"
+    ]
+  },
+  {
+    path: "/best-ai-skills-for-coding",
+    title: "Best AI Coding Skills for Code Review and Frontend | SkillFit",
+    descriptionIncludes: "Compare AI coding skills",
+    h1: "Best AI Coding Skills for Code Review and Frontend",
+    bodyIncludes: [
+      "What are the best AI coding skills?",
+      "Which AI coding skill should I use for Figma to code?",
+      "implement-design skill card"
+    ]
+  },
+  {
+    path: "/how-to-choose-ai-skills",
+    title: "How to Choose AI Skills by Task Fit | SkillFit",
+    descriptionIncludes: "task-fit checklist",
+    h1: "How to Choose AI Skills by Task Fit",
+    bodyIncludes: [
+      "How do I validate an AI skill before using it?",
       "AI skill marketplace list"
     ]
   },

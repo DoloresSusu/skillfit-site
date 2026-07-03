@@ -118,10 +118,10 @@ export const seoGuides: SeoGuide[] = [
   {
     slug: "best-ai-skills-for-writing",
     path: "/best-ai-skills-for-writing",
-    title: "Best AI Skills for Writing",
-    shortTitle: "Writing Skills",
+    title: "Best AI Writing Skills for Articles and Copy",
+    shortTitle: "AI Writing Skills",
     description:
-      "How to choose AI skills for articles, landing page copy, rewrites, social posts, and narrative editing.",
+      "Compare AI writing skills for articles, landing page copy, rewrites, social posts, WeChat article insights, and narrative editing.",
     answer:
       "The best AI writing skill depends on the output format: use a copywriting skill for conversion pages, an editorial rewrite skill for articles, and a voice-preserving skill for personal content.",
     audience: [
@@ -160,9 +160,16 @@ export const seoGuides: SeoGuide[] = [
     relatedLinks: [
       { href: "/use-cases/best-skill-for-wechat-article-rewrite", label: "WeChat article use case" },
       { href: "/skills/copywriting", label: "copywriting skill card" },
+      { href: "/skills/marketing-psychology", label: "marketing-psychology skill card" },
+      { href: "/best-ai-skill-for-ui-design", label: "UI design copy context" },
       { href: "/submit", label: "Submit a writing result" }
     ],
     faqs: [
+      {
+        question: "What are the best AI writing skills?",
+        answer:
+          "The best AI writing skills are task-specific: use copywriting for conversion copy, editorial rewriting for articles, marketing psychology for sharper hooks, and source-aware skills when facts must be checked."
+      },
       {
         question: "What is the best AI skill for writing articles?",
         answer:
@@ -177,16 +184,21 @@ export const seoGuides: SeoGuide[] = [
         question: "How do I avoid AI-sounding copy?",
         answer:
           "Ask the skill to keep concrete details, remove vague claims, and explain tradeoffs in a natural voice."
+      },
+      {
+        question: "Which AI writing skill should I use for WeChat articles?",
+        answer:
+          "Use copywriting for structure and phrasing, then add marketing-psychology when the article needs a sharper hook, reader motivation, or stronger editorial angle."
       }
     ]
   },
   {
     slug: "best-ai-skills-for-coding",
     path: "/best-ai-skills-for-coding",
-    title: "Best AI Skills for Coding",
-    shortTitle: "Coding Skills",
+    title: "Best AI Coding Skills for Code Review and Frontend",
+    shortTitle: "AI Coding Skills",
     description:
-      "A practical way to choose AI skills for code review, frontend implementation, docs lookup, and agent workflow building.",
+      "Compare AI coding skills for code review, frontend implementation, Figma to code, docs lookup, and agent workflow building.",
     answer:
       "The best AI coding skill is task-specific: use code review skills for risk detection, frontend skills for interface work, docs skills for current API usage, and skill-building skills for reusable agent workflows.",
     audience: [
@@ -225,9 +237,15 @@ export const seoGuides: SeoGuide[] = [
     relatedLinks: [
       { href: "/use-cases/best-skill-for-code-review", label: "Code review use case" },
       { href: "/skills/frontend-design", label: "frontend-design skill card" },
+      { href: "/skills/implement-design", label: "implement-design skill card" },
       { href: "/skills/openai-docs", label: "openai-docs skill card" }
     ],
     faqs: [
+      {
+        question: "What are the best AI coding skills?",
+        answer:
+          "The best AI coding skills depend on the job: use code review skills for risk detection, frontend skills for UI work, implement-design for Figma to code, and official docs skills for current APIs."
+      },
       {
         question: "What is the best AI skill for code review?",
         answer:
@@ -242,6 +260,11 @@ export const seoGuides: SeoGuide[] = [
         question: "Can AI skills replace a developer?",
         answer:
           "No. They reduce iteration cost, but important changes still need tests, review, and product judgment."
+      },
+      {
+        question: "Which AI coding skill should I use for Figma to code?",
+        answer:
+          "Use implement-design when the input is an existing Figma or visual reference and the output needs visual fidelity, component structure, and frontend handoff."
       }
     ]
   },
@@ -326,10 +349,10 @@ export const seoGuides: SeoGuide[] = [
   {
     slug: "how-to-choose-ai-skills",
     path: "/how-to-choose-ai-skills",
-    title: "How to Choose AI Skills",
+    title: "How to Choose AI Skills by Task Fit",
     shortTitle: "Choose AI Skills",
     description:
-      "A first-principles checklist for choosing AI agent skills by task, evidence, safety, and output quality.",
+      "A task-fit checklist for choosing AI skills by job-to-be-done, evidence, safety, validation prompts, and output quality.",
     answer:
       "Choose an AI skill by starting from the task, then checking required capabilities, evidence quality, safety risk, and whether the output improves your real workflow.",
     audience: [
@@ -369,6 +392,7 @@ export const seoGuides: SeoGuide[] = [
     relatedLinks: [
       { href: "/use-cases", label: "Browse use cases" },
       { href: "/skills", label: "Browse skill cards" },
+      { href: "/ai-skill-marketplace-list", label: "AI skill marketplace list" },
       { href: "/submit", label: "Submit your task" }
     ],
     faqs: [
@@ -386,6 +410,11 @@ export const seoGuides: SeoGuide[] = [
         question: "How many AI skills should I use?",
         answer:
           "Use fewer skills with clearer jobs. Too many overlapping skills make evaluation and maintenance harder."
+      },
+      {
+        question: "How do I validate an AI skill before using it?",
+        answer:
+          "Run one small task with a clear success criterion, inspect evidence and failure modes, then keep the skill only if it improves the real workflow."
       }
     ]
   },

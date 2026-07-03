@@ -329,18 +329,50 @@ export const skills: Skill[] = [
   {
     slug: "implement-design",
     name: "implement-design",
-    tagline: "Translates Figma designs into production-ready code.",
-    seoTitle: "implement-design Skill Review for Figma to Code",
+    tagline: "implement-design skill for Figma to code, visual fidelity, and frontend handoff.",
+    seoTitle: "implement-design Skill Review: Figma to Code and Design Implementation",
     seoDescription:
-      "Review the implement-design skill for Figma to code work, visual fidelity, component implementation, and frontend handoff tasks.",
+      "Review the implement-design skill for Figma to code, design implementation, visual fidelity, component structure, and frontend handoff tasks.",
     category: "Design implementation",
     platform: "Codex Skill",
     sourceUrl: "/submit",
     installCommand: "Requires Figma context",
     evidenceLevel: "C",
     safetyLevel: "medium",
-    bestFor: ["Figma to code", "Visual fidelity", "Component implementation"],
+    bestFor: ["Figma to code", "Design implementation", "Component implementation"],
     notFor: ["Open-ended design without references"],
+    audienceNotes: [
+      "Builders searching for an implement design skill after a visual source already exists",
+      "Frontend teams converting Figma, screenshots, or reference UI into production code",
+      "PMs who care more about fidelity and handoff quality than a new visual direction"
+    ],
+    evidenceNotes: [
+      "Search Console is already showing impressions for implement design, design implement, and design and implement queries.",
+      "The skill should be judged on visual fidelity, responsive behavior, component structure, and whether the implementation matches the design source."
+    ],
+    safetyNotes: [
+      "Implementation still needs human review for accessibility, data wiring, and product-specific edge cases.",
+      "Do not use it as a substitute for design discovery when there is no source mockup or clear visual direction."
+    ],
+    usagePrompt:
+      "Implement this Figma or screenshot reference as production-ready frontend code. Preserve visual hierarchy, spacing, responsive behavior, and component structure. Call out any assets, states, or interactions that are missing from the design.",
+    faqs: [
+      {
+        question: "What is implement-design best for?",
+        answer:
+          "implement-design is best for Figma to code, design implementation, component structure, visual fidelity, and frontend handoff when a design source already exists."
+      },
+      {
+        question: "Should I use implement-design or frontend-design?",
+        answer:
+          "Use implement-design when you already have a Figma file, screenshot, or reference UI to reproduce. Use frontend-design when you need a new visual direction or landing page concept."
+      },
+      {
+        question: "Can implement-design create a design from scratch?",
+        answer:
+          "It can help with implementation decisions, but it is strongest when the source design is already defined. For open-ended exploration, start with frontend-design or ui-ux-pro-max."
+      }
+    ],
     fitMap: [
       {
         useCaseSlug: "best-skill-for-frontend-landing-page",

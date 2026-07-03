@@ -33,6 +33,16 @@ const highIntentPaths = [
     description: "Research skills for source-backed reports, competitor analysis, and memos."
   },
   {
+    href: "/best-ai-skills-for-writing",
+    label: "AI writing skills",
+    description: "Choose skills for articles, landing page copy, rewrites, and WeChat insights."
+  },
+  {
+    href: "/best-ai-skills-for-coding",
+    label: "AI coding skills",
+    description: "Compare code review, frontend implementation, Figma to code, and docs lookup."
+  },
+  {
     href: "/ai-skill-marketplace-list",
     label: "AI skill marketplace list",
     description: "Where to discover AI agent skills, plugins, GPTs, repositories, and packs."
@@ -56,6 +66,11 @@ const highIntentPaths = [
     href: "/use-cases/best-skill-for-frontend-landing-page",
     label: "AI landing page skill",
     description: "Compare frontend-design, ui-ux-pro-max, and implement-design for page launches."
+  },
+  {
+    href: "/skills/implement-design",
+    label: "implement-design skill",
+    description: "Review Figma to code, design implementation, visual fidelity, and frontend handoff."
   }
 ];
 
