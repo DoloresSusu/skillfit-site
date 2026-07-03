@@ -703,14 +703,45 @@ export const skills: Skill[] = [
     slug: "lark-calendar",
     name: "lark-calendar",
     tagline: "Manages Feishu/Lark calendar events and availability.",
+    seoTitle: "lark-calendar Skill Review: Lark Calendar Events and Availability",
+    seoDescription:
+      "Review the lark-calendar skill for Feishu/Lark calendar events, meeting scheduling, freebusy checks, attendee updates, and availability workflows.",
     category: "Lark workflow",
     platform: "Codex Skill",
     sourceUrl: "/submit",
     installCommand: "Requires lark-cli authentication",
     evidenceLevel: "C",
     safetyLevel: "medium",
-    bestFor: ["Calendar", "Meetings", "Freebusy"],
-    notFor: ["Google Calendar-only users"],
+    bestFor: ["Lark Calendar", "Meetings", "Freebusy"],
+    notFor: ["Google Calendar-only users", "Scheduling without workspace permission"],
+    audienceNotes: [
+      "Operators who coordinate meetings inside Feishu/Lark",
+      "Teams checking freebusy before scheduling cross-functional meetings",
+      "Assistants that need to update attendees, time, and calendar metadata"
+    ],
+    safetyNotes: [
+      "Calendar events can expose private participant and meeting details.",
+      "Use authenticated workspace access and confirm before changing attendee lists or times."
+    ],
+    usagePrompt:
+      "Find my available Lark calendar slots tomorrow afternoon, compare attendee freebusy, and propose two meeting times with the least conflict.",
+    faqs: [
+      {
+        question: "What is lark-calendar best for?",
+        answer:
+          "lark-calendar is best for Feishu/Lark calendar event lookup, meeting creation, attendee management, freebusy checks, and availability workflows."
+      },
+      {
+        question: "Can lark-calendar manage Google Calendar?",
+        answer:
+          "No. Treat lark-calendar as a Feishu/Lark calendar workflow skill, not a Google Calendar integration."
+      },
+      {
+        question: "What should I verify before using lark-calendar?",
+        answer:
+          "Verify workspace authentication, calendar permission, attendee visibility, and whether the skill will read only or modify an event."
+      }
+    ],
     fitMap: []
   },
   {
@@ -808,14 +839,49 @@ export const skills: Skill[] = [
     slug: "dreamina-cli",
     name: "dreamina-cli",
     tagline: "Generates Dreamina images or videos through CLI workflows.",
+    seoTitle: "dreamina-cli Skill Review: Dreamina CLI Image and Video Generation",
+    seoDescription:
+      "Review the dreamina-cli skill for Dreamina image generation, video generation, CLI workflows, batch prompts, downloads, and creative asset production.",
     category: "Image/video generation",
     platform: "Codex Skill",
     sourceUrl: "/submit",
     installCommand: "Requires Dreamina CLI account",
     evidenceLevel: "C",
     safetyLevel: "medium",
-    bestFor: ["Dreamina images", "Dreamina video", "Batch generation"],
-    notFor: ["Provider-agnostic image generation"],
+    bestFor: ["Dreamina CLI", "Dreamina images", "Dreamina video"],
+    notFor: ["Provider-agnostic image generation", "Final commercial assets without rights review"],
+    audienceNotes: [
+      "Creators who already use Dreamina and want repeatable CLI generation",
+      "Operators producing batches of image or video prompt variations",
+      "AI builders testing creative assets inside a local workflow"
+    ],
+    evidenceNotes: [
+      "Search Console already shows impressions and clicks for dreamina-cli, making exact-match metadata worthwhile.",
+      "The best evidence should come from repeatable prompt-to-asset examples with output links and generation settings."
+    ],
+    safetyNotes: [
+      "Review image and video rights before publishing generated assets commercially.",
+      "Avoid submitting private brand material or sensitive likenesses unless the account and policy path are approved."
+    ],
+    usagePrompt:
+      "Generate three Dreamina image concepts for a SkillFit landing page hero. Save the prompts, asset IDs, output links, and a short note explaining which concept is most usable.",
+    faqs: [
+      {
+        question: "What is dreamina-cli best for?",
+        answer:
+          "dreamina-cli is best for Dreamina image and video generation from repeatable CLI workflows, especially when you need batch prompts and saved output references."
+      },
+      {
+        question: "Is dreamina-cli provider agnostic?",
+        answer:
+          "No. It is useful when Dreamina is the target generation provider. Use a broader image generation skill if you need provider comparison."
+      },
+      {
+        question: "How should I test dreamina-cli quickly?",
+        answer:
+          "Give it a small prompt batch, require saved output links or asset IDs, then compare whether the outputs match the creative brief."
+      }
+    ],
     fitMap: []
   },
   {
@@ -894,6 +960,9 @@ export const arenas: Arena[] = [
   {
     slug: "frontend-design-vs-ui-ux-pro-max-landing-page",
     title: "frontend-design vs ui-ux-pro-max for a landing page",
+    seoTitle: "frontend-design vs ui-ux-pro-max: Landing Page Skill Comparison",
+    seoDescription:
+      "Compare frontend-design vs ui-ux-pro-max for AI landing pages, visual direction, UX critique, responsive layout, and shippable frontend work.",
     task:
       "Turn the SkillFit idea into a credible first-screen landing page for AI builders.",
     skillA: "frontend-design",
@@ -904,11 +973,39 @@ export const arenas: Arena[] = [
       "Output B prioritized UX clarity, section hierarchy, and broad design heuristics.",
     verdict:
       "Use frontend-design when visual identity matters most; use ui-ux-pro-max when you need a broader UX review.",
+    answer:
+      "Choose frontend-design when you need a new landing page direction and shippable visual concept. Choose ui-ux-pro-max when you need UX critique, hierarchy review, and interaction-level feedback.",
+    relatedLinks: [
+      { href: "/use-cases/best-skill-for-frontend-landing-page", label: "AI landing page skill use case" },
+      { href: "/skills/frontend-design", label: "frontend-design Skill Review" },
+      { href: "/skills/ui-ux-pro-max", label: "ui-ux-pro-max Skill Review" },
+      { href: "/best-ai-skill-for-ui-design", label: "AI UI design skill guide" }
+    ],
+    faqs: [
+      {
+        question: "Should I use frontend-design or ui-ux-pro-max for a landing page?",
+        answer:
+          "Use frontend-design when you need a polished first-screen concept or production-ready page direction. Use ui-ux-pro-max when the page already exists and needs structured UX critique."
+      },
+      {
+        question: "Which skill is better for visual direction?",
+        answer:
+          "frontend-design is usually better for visual direction because it focuses on distinctive, production-grade frontend interfaces."
+      },
+      {
+        question: "Which skill is better for UX review?",
+        answer:
+          "ui-ux-pro-max is usually better for UX review, dashboard critique, flow clarity, and interaction friction."
+      }
+    ],
     status: "Published"
   },
   {
     slug: "web-access-vs-openai-docs-research-report",
     title: "web-access vs openai-docs for current research",
+    seoTitle: "web-access vs openai-docs: Current Research Skill Comparison",
+    seoDescription:
+      "Compare web-access vs openai-docs for current research, official documentation, source-backed reports, and AI agent research workflows.",
     task:
       "Research the best AI coding agents and cite current official sources.",
     skillA: "web-access",
@@ -919,11 +1016,38 @@ export const arenas: Arena[] = [
       "Output B stayed precise for official OpenAI product and API information.",
     verdict:
       "Use web-access for broad competitor research; use openai-docs for official OpenAI implementation details.",
+    answer:
+      "Use web-access when the research needs broad current sources. Use openai-docs when the answer depends on official OpenAI product or API documentation.",
+    relatedLinks: [
+      { href: "/best-ai-skills-for-research", label: "AI researcher skills guide" },
+      { href: "/skills/web-access", label: "web-access Skill Review" },
+      { href: "/skills/openai-docs", label: "openai-docs Skill Review" }
+    ],
+    faqs: [
+      {
+        question: "Should I use web-access or openai-docs for research?",
+        answer:
+          "Use web-access for broad web research and competitor discovery. Use openai-docs when the answer must come from official OpenAI documentation."
+      },
+      {
+        question: "Which skill is better for current competitor research?",
+        answer:
+          "web-access is better for current competitor research because it can work across multiple public sources and product pages."
+      },
+      {
+        question: "Which skill is better for API implementation questions?",
+        answer:
+          "openai-docs is better when implementation depends on official OpenAI API, model, or product documentation."
+      }
+    ],
     status: "Published"
   },
   {
     slug: "copywriting-vs-marketing-psychology-wechat",
     title: "copywriting vs marketing-psychology for WeChat rewrite",
+    seoTitle: "copywriting vs marketing-psychology: WeChat Rewrite Skill Comparison",
+    seoDescription:
+      "Compare copywriting vs marketing-psychology for WeChat article rewrites, Chinese article insights, hooks, persuasion angles, and publishable structure.",
     task:
       "Rewrite an analysis article into a sharper WeChat post with a stronger hook.",
     skillA: "copywriting",
@@ -934,6 +1058,31 @@ export const arenas: Arena[] = [
       "Output B added persuasion frames and decision-making angles.",
     verdict:
       "Use copywriting for publishable text; use marketing-psychology as a strategic second pass.",
+    answer:
+      "Use copywriting for the publishable WeChat rewrite. Use marketing-psychology when the main gap is hook, reader motivation, objections, or persuasion angle.",
+    relatedLinks: [
+      { href: "/use-cases/best-skill-for-wechat-article-rewrite", label: "WeChat article insights use case" },
+      { href: "/best-ai-skills-for-writing", label: "AI writing skill guide" },
+      { href: "/skills/copywriting", label: "copywriting Skill Review" },
+      { href: "/skills/marketing-psychology", label: "marketing-psychology Skill Review" }
+    ],
+    faqs: [
+      {
+        question: "Should I use copywriting or marketing-psychology for WeChat rewrite?",
+        answer:
+          "Use copywriting first when you need readable, publishable text. Use marketing-psychology as a second pass when the article needs a stronger hook and reader motivation."
+      },
+      {
+        question: "Which skill is better for Chinese article structure?",
+        answer:
+          "copywriting is usually better for turning source material into a clearer article structure and smoother sentences."
+      },
+      {
+        question: "Which skill is better for persuasion angles?",
+        answer:
+          "marketing-psychology is stronger when you need objections, motivation frames, and strategic messaging angles."
+      }
+    ],
     status: "Published"
   }
 ];

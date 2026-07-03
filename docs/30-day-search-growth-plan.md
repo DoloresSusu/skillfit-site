@@ -286,6 +286,9 @@ Production is not updated until all of these are true:
 - `/use-cases/best-skill-for-wechat-article-rewrite` has the title `Best AI Skill for WeChat Article Insights | SkillFit`.
 - `/use-cases/best-skill-for-frontend-landing-page` has the title `Best AI Skill for Frontend Landing Pages | SkillFit`.
 - `/skills/lark-minutes` has the title `lark-minutes Skill Review: Lark Meeting Minutes and Action Items | SkillFit`.
+- `/arena/frontend-design-vs-ui-ux-pro-max-landing-page` has the title `frontend-design vs ui-ux-pro-max: Landing Page Skill Comparison | SkillFit`.
+- `/skills/dreamina-cli` has the title `dreamina-cli Skill Review: Dreamina CLI Image and Video Generation | SkillFit`.
+- `/skills/lark-calendar` has the title `lark-calendar Skill Review: Lark Calendar Events and Availability | SkillFit`.
 - `/llms.txt` returns a plain-text SkillFit index with priority pages and skill reviews.
 - `/sitemap.xml` has a `2026-07-03` or later `lastmod`.
 
@@ -324,10 +327,14 @@ Shipped in the current local change set:
 - The two GSC quick-win use cases now have exact-intent snippets and FAQ sections: `WeChat article insights` and `AI landing page skill`.
 - `lark-minutes` now targets `Lark meeting minutes`, meeting summaries, chapters, action items, and follow-up workflows instead of a generic meeting-intelligence snippet.
 - `/llms.txt` now exists and lists priority pages, use cases, skill reviews, guides, and arena comparisons for AI crawlers and answer engines.
+- Arena detail pages now include canonical URLs, OpenGraph metadata, Article JSON-LD, FAQPage JSON-LD, BreadcrumbList JSON-LD, short-answer boxes, tracked reveal links, and tracked related links.
+- The `frontend-design vs ui-ux-pro-max` arena page now targets the exact comparison queries that already have top-10 average positions in GSC.
+- `dreamina-cli` now targets Dreamina CLI image/video generation, batch prompts, saved output references, and quick validation workflows.
+- `lark-calendar` now targets Lark Calendar events, freebusy, attendee management, and availability workflows.
 
 Still needs deployment and external verification:
 
 - Deploy to production.
 - Submit `https://get-skill-fit.com/sitemap.xml` in Search Console.
-- Request indexing for `/`, `/skills`, `/skills/web-access`, `/skills/ui-ux-pro-max`, `/skills/lark-minutes`, `/best-ai-skills-for-research`, `/use-cases/best-skill-for-wechat-article-rewrite`, and `/use-cases/best-skill-for-frontend-landing-page`.
+- Request indexing for `/`, `/skills`, `/skills/web-access`, `/skills/ui-ux-pro-max`, `/skills/lark-minutes`, `/skills/dreamina-cli`, `/skills/lark-calendar`, `/best-ai-skills-for-research`, `/arena/frontend-design-vs-ui-ux-pro-max-landing-page`, `/use-cases/best-skill-for-wechat-article-rewrite`, and `/use-cases/best-skill-for-frontend-landing-page`.
 - Check GSC on 2026-07-10, 2026-07-17, 2026-07-24, and 2026-08-03.

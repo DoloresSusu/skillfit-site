@@ -67,11 +67,22 @@ export type UseCase = {
 export type Arena = {
   slug: string;
   title: string;
+  seoTitle?: string;
+  seoDescription?: string;
   task: string;
   skillA: string;
   skillB: string;
   blindSummaryA: string;
   blindSummaryB: string;
   verdict: string;
+  answer?: string;
+  relatedLinks?: Array<{
+    href: string;
+    label: string;
+  }>;
+  faqs?: Array<{
+    question: string;
+    answer: string;
+  }>;
   status: "Draft" | "Published";
 };

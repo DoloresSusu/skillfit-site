@@ -73,6 +73,30 @@ const pages = [
     descriptionIncludes: "Review the lark-minutes skill",
     h1: "lark-minutes Skill Review",
     bodyIncludes: ["Lark meeting minutes", "What is lark-minutes best for?"]
+  },
+  {
+    path: "/arena/frontend-design-vs-ui-ux-pro-max-landing-page",
+    title: "frontend-design vs ui-ux-pro-max: Landing Page Skill Comparison | SkillFit",
+    descriptionIncludes: "Compare frontend-design vs ui-ux-pro-max",
+    h1: "frontend-design vs ui-ux-pro-max for a landing page",
+    bodyIncludes: [
+      "Should I use frontend-design or ui-ux-pro-max for a landing page?",
+      "AI landing page skill use case"
+    ]
+  },
+  {
+    path: "/skills/dreamina-cli",
+    title: "dreamina-cli Skill Review: Dreamina CLI Image and Video Generation | SkillFit",
+    descriptionIncludes: "Review the dreamina-cli skill",
+    h1: "dreamina-cli Skill Review",
+    bodyIncludes: ["Dreamina CLI", "What is dreamina-cli best for?"]
+  },
+  {
+    path: "/skills/lark-calendar",
+    title: "lark-calendar Skill Review: Lark Calendar Events and Availability | SkillFit",
+    descriptionIncludes: "Review the lark-calendar skill",
+    h1: "lark-calendar Skill Review",
+    bodyIncludes: ["Lark Calendar", "What is lark-calendar best for?"]
   }
 ];
 
