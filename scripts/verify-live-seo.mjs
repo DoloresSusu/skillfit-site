@@ -13,7 +13,13 @@ const pages = [
     title: "AI Skill Directory and Evidence Cards | SkillFit",
     descriptionIncludes: "Browse an AI skill directory",
     h1: "AI Skill directory before you install another Skill.",
-    bodyIncludes: ["Priority comparisons", "web-access", "ui-ux-pro-max", "Skill Review"]
+    bodyIncludes: [
+      "Priority comparisons",
+      "web-access",
+      "ui-ux-pro-max",
+      "Skill Review",
+      "What is an AI skill directory?"
+    ]
   },
   {
     path: "/skills/web-access",
@@ -97,6 +103,27 @@ const pages = [
     descriptionIncludes: "Review the lark-calendar skill",
     h1: "lark-calendar Skill Review",
     bodyIncludes: ["Lark Calendar", "What is lark-calendar best for?"]
+  },
+  {
+    path: "/guides",
+    title: "AI Skill Guides | SkillFit",
+    descriptionIncludes: "Task-first guides for choosing AI Agent Skills",
+    h1: "AI Skill guides by task.",
+    bodyIncludes: ["What are AI skill guides?", "Best AI Researcher Skills for Web Research"]
+  },
+  {
+    path: "/use-cases",
+    title: "AI Skill Use Cases and Task Recommendations | SkillFit",
+    descriptionIncludes: "Browse AI skill use cases",
+    h1: "Choose by job-to-be-done, not by marketplace rank.",
+    bodyIncludes: ["What is an AI skill use case?", "Best Skill for Frontend Landing Page"]
+  },
+  {
+    path: "/arena",
+    title: "AI Skill Arena: Skill Comparisons and Duels | SkillFit",
+    descriptionIncludes: "Compare AI skills on concrete tasks",
+    h1: "Duels are evidence, not the whole ranking system.",
+    bodyIncludes: ["What is Skill Arena?", "frontend-design vs ui-ux-pro-max"]
   }
 ];
 

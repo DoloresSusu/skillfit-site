@@ -289,6 +289,9 @@ Production is not updated until all of these are true:
 - `/arena/frontend-design-vs-ui-ux-pro-max-landing-page` has the title `frontend-design vs ui-ux-pro-max: Landing Page Skill Comparison | SkillFit`.
 - `/skills/dreamina-cli` has the title `dreamina-cli Skill Review: Dreamina CLI Image and Video Generation | SkillFit`.
 - `/skills/lark-calendar` has the title `lark-calendar Skill Review: Lark Calendar Events and Availability | SkillFit`.
+- `/guides` has FAQ content for `What are AI skill guides?` and an ItemList of guide pages.
+- `/use-cases` has the title `AI Skill Use Cases and Task Recommendations | SkillFit` plus FAQ and ItemList structured data.
+- `/arena` has the title `AI Skill Arena: Skill Comparisons and Duels | SkillFit` plus FAQ and ItemList structured data.
 - `/llms.txt` returns a plain-text SkillFit index with priority pages and skill reviews.
 - `/sitemap.xml` has a `2026-07-03` or later `lastmod`.
 
@@ -331,6 +334,7 @@ Shipped in the current local change set:
 - The `frontend-design vs ui-ux-pro-max` arena page now targets the exact comparison queries that already have top-10 average positions in GSC.
 - `dreamina-cli` now targets Dreamina CLI image/video generation, batch prompts, saved output references, and quick validation workflows.
 - `lark-calendar` now targets Lark Calendar events, freebusy, attendee management, and availability workflows.
+- `/skills`, `/guides`, `/use-cases`, and `/arena` now include CollectionPage, ItemList, FAQPage, and BreadcrumbList structured data so Google can read the site as a task-to-skill directory instead of isolated cards.
 
 Still needs deployment and external verification:
 
