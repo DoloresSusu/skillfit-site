@@ -295,7 +295,15 @@ Resolution options:
 
 1. Connect Vercel project `skillfit-site` to GitHub repository `DoloresSusu/skillfit-site`, branch `main`, then redeploy.
 2. Or run `vercel login` locally, then deploy with `npx vercel --prod`.
-3. After either path, run `npm run verify:live-seo`.
+3. Or add a GitHub repository secret named `VERCEL_TOKEN`, then run the `Deploy Vercel Production` workflow manually from GitHub Actions.
+4. After any path, run `npm run verify:live-seo`.
+
+Manual GitHub Actions fallback:
+
+- Create a Vercel token from Vercel account settings.
+- Add it to GitHub repository `DoloresSusu/skillfit-site` as `Settings > Secrets and variables > Actions > New repository secret > VERCEL_TOKEN`.
+- Open `Actions > Deploy Vercel Production > Run workflow`.
+- The workflow builds the site, deploys the Vercel project IDs copied from the local `.vercel/project.json`, and retries `npm run verify:live-seo` until the live CDN reflects the SEO changes.
 
 ## Implementation Status
 

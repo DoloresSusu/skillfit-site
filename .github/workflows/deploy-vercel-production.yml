@@ -1,0 +1,55 @@
+name: Deploy Vercel Production
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  deploy-production:
+    name: Deploy production
+    runs-on: ubuntu-latest
+    env:
+      VERCEL_ORG_ID: team_Nd9boAzm9bLBicc82l3Ldi7P
+      VERCEL_PROJECT_ID: prj_yrOvgMPda8gG13E2AtuGxPDqN0Er
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      - name: Deploy to Vercel production
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+        run: |
+          if [ -z "$VERCEL_TOKEN" ]; then
+            echo "Missing GitHub secret VERCEL_TOKEN." >&2
+            exit 1
+          fi
+
+          npx vercel deploy --prod --yes --token "$VERCEL_TOKEN"
+
+      - name: Verify live SEO changes
+        run: |
+          for attempt in 1 2 3 4 5 6; do
+            if npm run verify:live-seo; then
+              exit 0
+            fi
+
+            echo "Live SEO verification failed on attempt ${attempt}; retrying after CDN propagation..."
+            sleep 20
+          done
+
+          npm run verify:live-seo
