@@ -6,6 +6,8 @@ export type Skill = {
   slug: string;
   name: string;
   tagline: string;
+  seoTitle?: string;
+  seoDescription?: string;
   category: string;
   platform: string;
   sourceUrl: string;

@@ -21,15 +21,20 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const skill = getSkill(slug);
   if (!skill) return {};
 
+  const title = skill.seoTitle || `${skill.name} Skill Review: fit, evidence, and safety`;
+  const description =
+    skill.seoDescription ||
+    `${skill.tagline} See task fit, evidence notes, safety checks, and a 10-minute SkillFit test prompt.`;
+
   return {
-    title: `${skill.name} skill review: fit, evidence, and safety`,
-    description: `${skill.tagline} See task fit, evidence notes, safety checks, and a 10-minute SkillFit test prompt.`,
+    title,
+    description,
     alternates: {
       canonical: `/skills/${skill.slug}`
     },
     openGraph: {
-      title: `${skill.name} skill review | SkillFit`,
-      description: skill.tagline,
+      title: `${title} | SkillFit`,
+      description,
       url: `${baseUrl}/skills/${skill.slug}`,
       type: "article"
     }
@@ -40,6 +45,7 @@ export default async function SkillDetailPage({ params }: PageProps) {
   const { slug } = await params;
   const skill = getSkill(slug);
   if (!skill) notFound();
+  const primaryUse = skill.bestFor.slice(0, 3).join(", ") || "task-fit evaluation";
 
   const jsonLd = [
     {
@@ -99,8 +105,15 @@ export default async function SkillDetailPage({ params }: PageProps) {
       <JsonLd data={jsonLd} />
       <section className="page-hero">
         <span className="eyebrow">{skill.category}</span>
-        <h1>{skill.name}</h1>
+        <h1>{skill.name} Skill Review</h1>
         <p className="lead">{skill.tagline}</p>
+        <div className="answer-box">
+          <strong>Best fit</strong>
+          <p>
+            Use {skill.name} when your task needs {primaryUse}. Check the evidence,
+            safety notes, and 10-minute test before adding it to your workflow.
+          </p>
+        </div>
         <div className="badge-row">
           <EvidenceBadge level={skill.evidenceLevel} />
           <SafetyBadge level={skill.safetyLevel} />

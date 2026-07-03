@@ -16,16 +16,50 @@ export const metadata: Metadata = {
   }
 };
 
+const highIntentPaths = [
+  {
+    href: "/skills/web-access",
+    label: "web-access skill review",
+    description: "Live web research, dynamic pages, current sources, and competitor discovery."
+  },
+  {
+    href: "/skills/ui-ux-pro-max",
+    label: "ui ux pro max skill",
+    description: "UX critique, dashboards, design systems, and product interface review."
+  },
+  {
+    href: "/best-ai-skills-for-research",
+    label: "AI researcher skills",
+    description: "Research skills for source-backed reports, competitor analysis, and memos."
+  },
+  {
+    href: "/ai-skill-marketplace-list",
+    label: "AI skill marketplace list",
+    description: "Where to discover AI agent skills, plugins, GPTs, repositories, and packs."
+  },
+  {
+    href: "/best-ai-skill-for-competitive-analysis",
+    label: "AI competitor gap analysis agent",
+    description: "Pick a skill for competitor discovery, positioning evidence, and market gaps."
+  },
+  {
+    href: "/arena/frontend-design-vs-ui-ux-pro-max-landing-page",
+    label: "frontend-design vs ui-ux-pro-max",
+    description: "Compare visual direction against broader UX critique for landing pages."
+  }
+];
+
 export default function HomePage() {
   return (
     <>
       <section className="hero">
         <div>
           <span className="eyebrow">Task-to-Skill Advisor</span>
-          <h1>Find the right Skill for your task.</h1>
+          <h1>Find the right AI Skill for your task.</h1>
           <p className="lead">
-            SkillFit translates technical AI Agent Skills into task-first recommendations
-            for PMs, creators, founders, teams, and AI builders.
+            SkillFit is an AI skill finder and agent skill directory that translates
+            technical Skills into task-first recommendations for PMs, creators, founders,
+            teams, and AI builders.
           </p>
           <TaskFinder useCases={useCases} />
         </div>
@@ -34,7 +68,8 @@ export default function HomePage() {
           <h2>A decision layer above fragmented Skill markets.</h2>
           <p>
             Start with the job to be done. Then compare task fit, evidence, safety
-            notes, and a 10-minute test before installing another Skill.
+            notes, marketplace alternatives, and a 10-minute test before installing
+            another Skill.
           </p>
           <div className="hero-metrics">
             <div className="metric">
@@ -51,6 +86,42 @@ export default function HomePage() {
             </div>
           </div>
         </aside>
+      </section>
+
+      <section className="section guide-section">
+        <div className="section-heading">
+          <div>
+            <span className="eyebrow">High-intent searches</span>
+            <h2>Fast paths for queries already showing in Google</h2>
+          </div>
+          <TrackedLink
+            className="button button-light"
+            href="/skills"
+            eventName="skill_card_clicked"
+            eventProperties={{ source: "home_high_intent_cta" }}
+          >
+            Browse directory
+          </TrackedLink>
+        </div>
+        <div className="grid grid-3">
+          {highIntentPaths.map((path) => (
+            <TrackedLink
+              className="card guide-card"
+              href={path.href}
+              key={path.href}
+              eventName="guide_clicked"
+              eventProperties={{
+                source: "home_high_intent",
+                target_path: path.href
+              }}
+            >
+              <span className="card-topline">Search opportunity</span>
+              <h3>{path.label}</h3>
+              <p>{path.description}</p>
+              <span className="text-link">Open answer</span>
+            </TrackedLink>
+          ))}
+        </div>
       </section>
 
       <section className="section">

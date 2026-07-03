@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/next";
 import { JsonLd } from "@/components/JsonLd";
 import { PostHogPageView } from "@/components/PostHogPageView";
+import { ScrollDepthTracker } from "@/components/ScrollDepthTracker";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import "./globals.css";
@@ -11,11 +12,11 @@ const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://get-skill-fit.com";
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
   title: {
-    default: "SkillFit - Find the right AI Agent Skill for your task",
+    default: "SkillFit: AI Skill Finder and Agent Skill Directory",
     template: "%s | SkillFit"
   },
   description:
-    "SkillFit helps PMs, creators, founders, teams, and AI builders choose Agent Skills by task fit, evidence, safety notes, and test packs.",
+    "Find the right AI agent skill by task. Compare skill fit, evidence, safety notes, test prompts, and marketplace alternatives.",
   icons: {
     icon: "/favicon.svg"
   },
@@ -25,8 +26,8 @@ export const metadata: Metadata = {
     }
   },
   openGraph: {
-    title: "SkillFit",
-    description: "Find the right AI Agent Skill for your task.",
+    title: "SkillFit AI Skill Finder",
+    description: "Compare AI agent skills by task fit, evidence, safety notes, and test prompts.",
     type: "website"
   }
 };
@@ -37,9 +38,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       "@context": "https://schema.org",
       "@type": "WebSite",
       name: "SkillFit",
+      alternateName: ["Skill Fit", "AI Skill Finder", "AI Agent Skill Directory"],
       url: baseUrl,
       description:
-        "SkillFit helps PMs, creators, founders, teams, and AI builders choose Agent Skills by task fit, evidence, safety notes, and test packs.",
+        "SkillFit helps PMs, creators, founders, teams, and AI builders choose AI agent skills by task fit, evidence, safety notes, and test prompts.",
       inLanguage: "en",
       potentialAction: {
         "@type": "SearchAction",
@@ -52,7 +54,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       "@type": "Organization",
       name: "SkillFit",
       url: baseUrl,
-      description: "A task-to-skill advisor for AI Agent Skills.",
+      description: "A task-to-skill advisor and AI agent skill directory.",
       sameAs: ["https://doloressu.com/projects/skillfit.html"]
     }
   ];
@@ -67,6 +69,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <SiteFooter />
         </div>
         <PostHogPageView />
+        <ScrollDepthTracker />
         <Analytics />
       </body>
     </html>

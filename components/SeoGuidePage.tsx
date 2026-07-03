@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { JsonLd } from "@/components/JsonLd";
+import { TrackedLink } from "@/components/TrackedLink";
 import { getAlternateLanguages } from "@/data/i18n";
 import type { SeoGuide } from "@/data/seoGuides";
 
@@ -167,9 +167,18 @@ export function SeoGuidePage({ guide, locale = "en" }: { guide: SeoGuide; locale
           <h2>{labels.related}</h2>
           <div className="link-stack">
             {guide.relatedLinks.map((link) => (
-              <Link href={link.href} key={link.href}>
+              <TrackedLink
+                href={link.href}
+                key={link.href}
+                eventName="guide_clicked"
+                eventProperties={{
+                  source: "guide_related",
+                  guide: guide.slug,
+                  target_path: link.href
+                }}
+              >
                 {link.label}
-              </Link>
+              </TrackedLink>
             ))}
           </div>
         </aside>

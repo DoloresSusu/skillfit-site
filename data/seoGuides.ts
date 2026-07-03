@@ -35,13 +35,14 @@ export const seoGuides: SeoGuide[] = [
   {
     slug: "best-ai-skills-for-research",
     path: "/best-ai-skills-for-research",
-    title: "Best AI Skills for Research",
-    shortTitle: "Research Skills",
+    title: "Best AI Researcher Skills for Web Research",
+    shortTitle: "AI Researcher Skills",
     description:
-      "A practical guide to choosing AI agent skills for web research, competitor analysis, and source-backed reports.",
+      "Compare AI researcher skills for web research, competitor analysis, source-backed reports, and decision-ready research memos.",
     answer:
-      "The best AI skill for research is the one that can gather current sources, separate evidence from opinion, cite references, and turn uncertainty into a clear recommendation.",
+      "The best AI researcher skill can gather current sources, separate evidence from opinion, cite references, and turn uncertainty into a clear recommendation.",
     audience: [
+      "People searching for AI researcher skills with source-backed output",
       "Founders checking a market before building",
       "PMs comparing tools, agents, or workflows",
       "Creators turning scattered sources into publishable analysis"
@@ -84,6 +85,11 @@ export const seoGuides: SeoGuide[] = [
         question: "What makes an AI research skill good?",
         answer:
           "A good AI research skill verifies current sources, cites where information came from, explains uncertainty, and produces a decision-ready answer."
+      },
+      {
+        question: "Which AI researcher skills should I look for?",
+        answer:
+          "Look for AI researcher skills that can browse current sources, compare competitors, preserve citations, and explain what they could not verify."
       },
       {
         question: "Should I use a general chatbot for research?",
@@ -230,12 +236,12 @@ export const seoGuides: SeoGuide[] = [
   {
     slug: "ai-skill-marketplace-list",
     path: "/ai-skill-marketplace-list",
-    title: "AI Skill Marketplace List",
-    shortTitle: "Marketplace List",
+    title: "AI Skill Marketplace List and Directory",
+    shortTitle: "Skill Marketplace",
     description:
-      "A simple map of where AI agent skills, plugins, GPTs, and workflow packs are likely to be discovered.",
+      "A practical map of AI skill marketplace options, directories, platforms, GitHub repositories, GPTs, plugins, and workflow packs.",
     answer:
-      "AI skills are not concentrated in one store. They are distributed across agent platforms, GitHub repositories, model ecosystems, plugin directories, and community posts.",
+      "There is no single AI skill marketplace. AI skills are distributed across agent platforms, GitHub repositories, model ecosystems, plugin directories, and community posts.",
     audience: [
       "Users trying to find useful AI skills across platforms",
       "Builders deciding where to publish a skill",
@@ -279,6 +285,11 @@ export const seoGuides: SeoGuide[] = [
         question: "Is there one official AI skill marketplace?",
         answer:
           "No. AI skills are fragmented across platforms, repositories, communities, and product-specific directories."
+      },
+      {
+        question: "What is an AI skill marketplace?",
+        answer:
+          "An AI skill marketplace is any place where users discover, compare, install, or evaluate reusable AI agent skills, plugins, prompts, and workflow packs."
       },
       {
         question: "Why does fragmentation matter?",
@@ -361,12 +372,12 @@ export const seoGuides: SeoGuide[] = [
   {
     slug: "best-ai-skill-for-competitive-analysis",
     path: "/best-ai-skill-for-competitive-analysis",
-    title: "Best AI Skill for Competitive Analysis",
-    shortTitle: "Competitive analysis",
+    title: "Best AI Competitor Gap Analysis Agent Skill",
+    shortTitle: "Competitor Gap Analysis",
     description:
-      "Choose an AI skill for competitor discovery, positioning maps, source-backed comparisons, and market gap analysis.",
+      "Choose an AI competitor gap analysis agent skill for competitor discovery, positioning maps, source-backed comparisons, and market gap analysis.",
     answer:
-      "Use a web research skill plus a synthesis skill when competitive analysis depends on current competitors, positioning evidence, and a decision-ready recommendation.",
+      "Use an AI competitor gap analysis agent that combines web research with synthesis when the work depends on current competitors, positioning evidence, and a decision-ready recommendation.",
     audience: [
       "Founders validating a new product idea",
       "PMs preparing competitor and market memos",
@@ -393,7 +404,7 @@ export const seoGuides: SeoGuide[] = [
       "Does it end with a clear gap, risk, and next test?"
     ],
     testPrompt:
-      "Find direct and indirect competitors for a website that recommends AI skills by task. Group them, cite sources, and identify the most defensible gap.",
+      "Act as an AI competitor gap analysis agent. Find direct and indirect competitors for a website that recommends AI skills by task. Group them, cite sources, and identify the most defensible gap.",
     redFlags: [
       "Competitor list contains only famous generic AI tools",
       "No links to source pages",
@@ -411,6 +422,11 @@ export const seoGuides: SeoGuide[] = [
         question: "What is the best AI skill for competitive analysis?",
         answer:
           "Use a skill that can browse current sources, compare competitors by user job, and turn evidence into a product recommendation."
+      },
+      {
+        question: "What is an AI competitor gap analysis agent?",
+        answer:
+          "It is an agent workflow that discovers competitors, compares positioning and proof, identifies unmet gaps, and recommends the next validation step."
       },
       {
         question: "Why not ask a general chatbot?",
@@ -752,10 +768,10 @@ export const seoGuides: SeoGuide[] = [
   {
     slug: "best-ai-skill-for-ui-design",
     path: "/best-ai-skill-for-ui-design",
-    title: "Best AI Skill for UI Design",
-    shortTitle: "UI design",
+    title: "Best AI Skill for UI Design: frontend-design vs ui-ux-pro-max",
+    shortTitle: "UI design skills",
     description:
-      "Choose an AI skill for landing pages, dashboards, visual systems, responsive layouts, and non-generic frontend design.",
+      "Choose an AI skill for landing pages, dashboards, UI UX Pro Max critique, visual systems, responsive layouts, and non-generic frontend design.",
     answer:
       "Use a frontend design skill when the task needs visual direction, responsive layout, interaction polish, and a UI that does not look like a generic template.",
     audience: [
@@ -801,6 +817,11 @@ export const seoGuides: SeoGuide[] = [
         question: "What is the best AI skill for UI design?",
         answer:
           "Use a frontend design skill when you need a responsive, polished, product-aware interface rather than isolated components."
+      },
+      {
+        question: "Where does ui-ux-pro-max fit?",
+        answer:
+          "ui-ux-pro-max fits UI/UX critique, dashboards, flows, design systems, and deciding what to improve before implementation."
       },
       {
         question: "When should I use a Figma implementation skill?",

@@ -41,11 +41,12 @@ export const useCases: UseCase[] = [
   },
   {
     slug: "best-skill-for-wechat-article-rewrite",
-    title: "Best Skill for WeChat Article Rewrite",
-    shortTitle: "WeChat article rewrite",
+    title: "Best Skill for WeChat Article Rewrite and Insights",
+    shortTitle: "WeChat article insights",
     description:
-      "Choose a Skill that can transform source material into a Chinese WeChat article with structure, judgment, and less AI flavor.",
-    userIntent: "I want publishable Chinese content with point of view, not a literal summary.",
+      "Choose a Skill that can transform source material into Chinese WeChat article insights, structure, judgment, and less AI flavor.",
+    userIntent:
+      "I want publishable Chinese content and WeChat article insights with point of view, not a literal summary.",
     requiredCapabilities: [
       "Source fidelity",
       "Chinese editorial structure",
@@ -66,7 +67,12 @@ export const useCases: UseCase[] = [
       ],
       failureSignals: ["Overly salesy headline", "Fact drift", "Generic AI wording"]
     },
-    keywords: ["wechat writing skill", "chinese rewrite skill", "公众号改写 skill"]
+    keywords: [
+      "wechat article insights",
+      "wechat writing skill",
+      "chinese rewrite skill",
+      "公众号改写 skill"
+    ]
   },
   {
     slug: "best-skill-for-research-report",
@@ -162,6 +168,9 @@ export const skills: Skill[] = [
     slug: "frontend-design",
     name: "frontend-design",
     tagline: "Creates distinctive, production-grade frontend interfaces.",
+    seoTitle: "frontend-design Skill Review for AI Frontend Design",
+    seoDescription:
+      "Review the frontend-design skill for landing pages, web UI, visual direction, responsive layout, and task-fit frontend design work.",
     category: "Design & frontend",
     platform: "Codex Skill",
     sourceUrl: "/submit",
@@ -181,15 +190,47 @@ export const skills: Skill[] = [
   {
     slug: "ui-ux-pro-max",
     name: "ui-ux-pro-max",
-    tagline: "UI/UX design intelligence across web, mobile, dashboards, and charts.",
+    tagline:
+      "UI UX Pro Max skill for UX critique, dashboards, design systems, and product interface review.",
+    seoTitle: "ui-ux-pro-max Skill Review: UI UX Pro Max for UX Design",
+    seoDescription:
+      "Review the ui-ux-pro-max skill for UI/UX critique, dashboards, design systems, frontend design decisions, and task-fit UX review.",
     category: "Design & UX",
     platform: "Codex Skill",
     sourceUrl: "/submit",
     installCommand: "Submit source link to verify",
     evidenceLevel: "B",
     safetyLevel: "low",
-    bestFor: ["UX critique", "Dashboards", "Design systems"],
-    notFor: ["Deep backend implementation"],
+    bestFor: ["UI UX Pro Max skill selection", "UX critique", "Dashboards"],
+    notFor: ["Deep backend implementation", "Pixel-perfect implementation without a design source"],
+    audienceNotes: [
+      "Founders and PMs comparing interface concepts before implementation",
+      "Builders who need a structured UX critique of a page, dashboard, or flow",
+      "Teams deciding between ui-ux-pro-max, frontend-design, and implement-design"
+    ],
+    evidenceNotes: [
+      "Search Console is already showing impressions for ui ux pro max and ui ux pro max skill queries, but the page needs stronger exact-match context.",
+      "The strongest evidence should come from before/after UX reviews, dashboard critiques, and design-system recommendations."
+    ],
+    usagePrompt:
+      "Review this dashboard or landing page for hierarchy, clarity, accessibility, interaction friction, and mobile behavior. Rank the top five UX fixes and explain which one should ship first.",
+    faqs: [
+      {
+        question: "What is the ui-ux-pro-max skill best for?",
+        answer:
+          "ui-ux-pro-max is best for UI/UX critique, dashboards, design systems, interaction review, and deciding what should change before frontend implementation."
+      },
+      {
+        question: "When should I use ui-ux-pro-max instead of frontend-design?",
+        answer:
+          "Use ui-ux-pro-max when you need structured UX review and flow critique. Use frontend-design when you need a stronger visual direction or a shippable page concept."
+      },
+      {
+        question: "Can ui-ux-pro-max implement the design?",
+        answer:
+          "Treat it as a design intelligence and critique skill first. Pair it with frontend-design or implement-design when you need production code."
+      }
+    ],
     fitMap: [
       {
         useCaseSlug: "best-skill-for-frontend-landing-page",
@@ -202,6 +243,9 @@ export const skills: Skill[] = [
     slug: "implement-design",
     name: "implement-design",
     tagline: "Translates Figma designs into production-ready code.",
+    seoTitle: "implement-design Skill Review for Figma to Code",
+    seoDescription:
+      "Review the implement-design skill for Figma to code work, visual fidelity, component implementation, and frontend handoff tasks.",
     category: "Design implementation",
     platform: "Codex Skill",
     sourceUrl: "/submit",
@@ -267,7 +311,10 @@ export const skills: Skill[] = [
     slug: "web-access",
     name: "web-access",
     tagline:
-      "Researches live web pages, dynamic sites, and current sources for decision-ready work.",
+      "web-access skill for live web research, dynamic pages, current sources, and competitor discovery.",
+    seoTitle: "web-access Skill Review: Live Web Research and Dynamic Pages",
+    seoDescription:
+      "Review the web-access skill for live web research, dynamic pages, source-backed reports, competitor discovery, and current AI agent research tasks.",
     category: "Research",
     platform: "Codex Skill",
     sourceUrl: "/submit",
@@ -283,7 +330,7 @@ export const skills: Skill[] = [
     evidenceLevel: "B",
     safetyLevel: "medium",
     bestFor: [
-      "Current research",
+      "web-access skill research",
       "Competitor discovery",
       "Source reading",
       "Market and product memos"
@@ -299,7 +346,7 @@ export const skills: Skill[] = [
       "Independent builders who need current docs, pricing, or ecosystem facts before coding"
     ],
     evidenceNotes: [
-      "Google Search Console is already surfacing this page for web-access skill queries, making it the strongest early SEO validation target.",
+      "Google Search Console is already surfacing this page for web-access skill and web access skill queries, making it the strongest early SEO validation target.",
       "The Skill is best validated on tasks where freshness matters: competitor research, pricing checks, product docs, and source-backed summaries.",
       "Evidence level should move from B to A only after SkillFit collects public output samples and repeatable test results."
     ],
@@ -315,6 +362,11 @@ export const skills: Skill[] = [
         question: "What is web-access best for?",
         answer:
           "web-access is best for AI agent tasks that need current web sources, dynamic pages, competitor discovery, or source-backed research."
+      },
+      {
+        question: "Is web-access a web research skill?",
+        answer:
+          "Yes. Treat web-access as a web research skill for live pages, current documentation, search results, competitor pages, and source-backed summaries."
       },
       {
         question: "When should I avoid web-access?",
