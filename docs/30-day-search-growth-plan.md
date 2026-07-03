@@ -274,6 +274,29 @@ The less likely one-month outcome:
 4. Review GSC on 2026-07-10 and compare against this baseline.
 5. Use PostHog to inspect landing-source paths and internal next clicks.
 
+## Deployment Gate
+
+Production is not updated until all of these are true:
+
+- `git log --oneline -1` shows the growth commit.
+- Vercel production deployment is built from that commit or a later commit.
+- `npm run verify:live-seo` passes against `https://get-skill-fit.com`.
+- The homepage contains `High-intent searches`.
+- `/skills/web-access` has the title `web-access Skill Review: Live Web Research and Dynamic Pages | SkillFit`.
+- `/sitemap.xml` has a `2026-07-03` or later `lastmod`.
+
+Current blocker found on 2026-07-03:
+
+- The local Vercel CLI token is invalid.
+- The Vercel project `skillfit-site` is not connected to a Git repository.
+- The production deployment still points at the old commit `d203274`.
+
+Resolution options:
+
+1. Connect Vercel project `skillfit-site` to GitHub repository `DoloresSusu/skillfit-site`, branch `main`, then redeploy.
+2. Or run `vercel login` locally, then deploy with `npx vercel --prod`.
+3. After either path, run `npm run verify:live-seo`.
+
 ## Implementation Status
 
 Shipped in the current local change set:
