@@ -68,6 +68,21 @@ const highIntentPaths = [
     description: "Review landing pages, web UI, visual direction, and responsive layouts."
   },
   {
+    href: "/best-ai-skill-for-slide-decks",
+    label: "AI slide deck skill",
+    description: "Choose skills for editable presentations, PowerPoint decks, and web decks."
+  },
+  {
+    href: "/best-ai-skill-for-documentation",
+    label: "AI documentation skill",
+    description: "Write README files, API explanations, workflow docs, and verification steps."
+  },
+  {
+    href: "/skills/marketing-psychology",
+    label: "marketing-psychology skill",
+    description: "Review persuasion angles, user motivation, campaign strategy, and hooks."
+  },
+  {
     href: "/arena/frontend-design-vs-ui-ux-pro-max-landing-page",
     label: "frontend-design vs ui-ux-pro-max",
     description: "Compare visual direction against broader UX critique for landing pages."

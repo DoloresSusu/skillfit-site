@@ -306,12 +306,18 @@ Production is not updated until all of these are true:
 - `/skills/web-access` has the title `web-access Skill Review: Live Web Research and Dynamic Pages | SkillFit`.
 - `/skills/frontend-design` has the title `frontend-design Skill Review: AI Frontend Design and Landing Pages | SkillFit`.
 - `/skills/openai-docs` has the title `openai-docs Skill Review: Official OpenAI Docs and API Help | SkillFit`.
+- `/skills/marketing-psychology` has the title `marketing-psychology Skill Review: Persuasion Angles and Campaign Strategy | SkillFit`.
+- `/skills/powerpoint` has the title `PowerPoint Skill Review: Editable PPTX and AI Slide Decks | SkillFit`.
+- `/skills/frontend-slides` has the title `frontend-slides Skill Review: Animated HTML Presentations | SkillFit`.
 - `/use-cases/best-skill-for-wechat-article-rewrite` has the title `Best AI Skill for WeChat Article Insights | SkillFit`.
 - `/use-cases/best-skill-for-frontend-landing-page` has the title `Best AI Skill for Frontend Landing Pages | SkillFit`.
+- `/use-cases/best-skill-for-presentation-generation` has the title `Best AI Skill for Presentation Generation and Slide Decks | SkillFit`.
 - `/best-ai-skills-for-writing` has the title `Best AI Writing Skills for Articles and Copy | SkillFit`.
 - `/best-ai-skills-for-coding` has the title `Best AI Coding Skills for Code Review and Frontend | SkillFit`.
 - `/how-to-choose-ai-skills` has the title `How to Choose AI Skills by Task Fit | SkillFit`.
 - `/best-ai-skill-for-product-requirements` has the title `Best AI PRD Skill for Product Requirements | SkillFit`.
+- `/best-ai-skill-for-slide-decks` has the title `Best AI Slide Deck Skill for Editable Presentations | SkillFit`.
+- `/best-ai-skill-for-documentation` has the title `Best AI Documentation Skill for README and API Docs | SkillFit`.
 - `/skills/implement-design` has the title `implement-design Skill Review: Figma to Code and Design Implementation | SkillFit`.
 - `/skills/lark-minutes` has the title `lark-minutes Skill Review: Lark Meeting Minutes and Action Items | SkillFit`.
 - `/arena/frontend-design-vs-ui-ux-pro-max-landing-page` has the title `frontend-design vs ui-ux-pro-max: Landing Page Skill Comparison | SkillFit`.
@@ -348,7 +354,7 @@ Manual GitHub Actions fallback:
 Shipped in the current local change set:
 
 - Homepage title, description, H1, and category language now target `SkillFit`, `Skill Fit`, `AI Skill Finder`, and `AI Agent Skill Directory`.
-- Homepage now includes a high-intent search section linking to pages Google is already testing: `web-access skill review`, `ui ux pro max skill`, `AI researcher skills`, `AI writing skills`, `AI coding skills`, `AI skill marketplace list`, `AI competitor gap analysis agent`, `AI PRD skill`, `openai-docs skill`, `frontend-design skill`, `frontend-design vs ui-ux-pro-max`, and `implement-design skill`.
+- Homepage now includes a high-intent search section linking to pages Google is already testing: `web-access skill review`, `ui ux pro max skill`, `AI researcher skills`, `AI writing skills`, `AI coding skills`, `AI skill marketplace list`, `AI competitor gap analysis agent`, `AI PRD skill`, `openai-docs skill`, `frontend-design skill`, `AI slide deck skill`, `AI documentation skill`, `marketing-psychology skill`, `frontend-design vs ui-ux-pro-max`, and `implement-design skill`.
 - `/skills` now has `AI Skill Directory: Reviews and Evidence Cards` metadata plus a priority comparisons block for the pages most likely to move in 30 days.
 - Skill detail pages now support per-skill SEO titles and descriptions, and render `Skill Review` in the H1.
 - `web-access`, `ui-ux-pro-max`, `frontend-design`, and `implement-design` have stronger query-matched skill metadata.
@@ -371,6 +377,7 @@ Shipped in the current local change set:
 - `scripts/analyze-gsc-export.mjs` and `npm run analyze:gsc` now turn weekly Search Console exports into ranked CTR rewrite, content-depth, authority-link, country, and device opportunities.
 - The about page now targets branded `SkillFit` and `AI skill finder` intent with AboutPage, FAQPage, BreadcrumbList structured data and tracked next-step links into `/skills`, `/use-cases`, and marketplace/research guides.
 - `frontend-design`, `openai-docs`, and `product requirements` pages now target their Search Console clusters with stronger exact-match titles, FAQs, prompts, and homepage internal links.
+- Slide deck, presentation generation, PowerPoint, frontend-slides, documentation, and marketing-psychology pages now target their remaining Search Console clusters with stronger exact-match metadata, FAQs, prompts, and homepage internal links.
 
 Still needs deployment and external verification:
 

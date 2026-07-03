@@ -765,12 +765,12 @@ export const seoGuides: SeoGuide[] = [
   {
     slug: "best-ai-skill-for-slide-decks",
     path: "/best-ai-skill-for-slide-decks",
-    title: "Best AI Skill for Slide Decks",
-    shortTitle: "Slide decks",
+    title: "Best AI Slide Deck Skill for Editable Presentations",
+    shortTitle: "AI Slide Deck Skill",
     description:
-      "Find an AI skill for turning notes into pitch decks, workshop decks, product decks, and editable presentations.",
+      "Choose an AI slide deck skill for editable presentations, PowerPoint decks, web decks, pitch decks, and narrative slide generation.",
     answer:
-      "The best AI skill for slide decks creates a storyline first, then turns it into editable slides with clear hierarchy and low text density.",
+      "The best AI slide deck skill creates a storyline first, then turns it into editable slides with clear hierarchy, low text density, and a reliable export path.",
     audience: [
       "Founders preparing pitch or demo decks",
       "PMs creating product review decks",
@@ -806,10 +806,17 @@ export const seoGuides: SeoGuide[] = [
     ],
     relatedLinks: [
       { href: "/use-cases/best-skill-for-presentation-generation", label: "Presentation use case" },
+      { href: "/skills/powerpoint", label: "PowerPoint skill card" },
+      { href: "/skills/frontend-slides", label: "frontend-slides skill card" },
       { href: "/best-ai-skills-for-writing", label: "Writing guide" },
       { href: "/submit", label: "Submit a deck workflow" }
     ],
     faqs: [
+      {
+        question: "What is the best AI slide deck skill?",
+        answer:
+          "Use a skill that creates the narrative first, keeps slide text low, and outputs editable PowerPoint or web presentation files rather than static images only."
+      },
       {
         question: "What is the best AI skill for presentations?",
         answer:
@@ -900,10 +907,10 @@ export const seoGuides: SeoGuide[] = [
   {
     slug: "best-ai-skill-for-documentation",
     path: "/best-ai-skill-for-documentation",
-    title: "Best AI Skill for Documentation",
+    title: "Best AI Documentation Skill for README and API Docs",
     shortTitle: "Documentation",
     description:
-      "Pick an AI skill for writing docs, README files, onboarding guides, API explanations, and workflow manuals.",
+      "Pick an AI documentation skill for README files, onboarding guides, API explanations, workflow manuals, and verification steps.",
     answer:
       "The best AI documentation skill explains what the user can do, shows the shortest working path, and keeps examples accurate to the current product or codebase.",
     audience: [
@@ -942,13 +949,19 @@ export const seoGuides: SeoGuide[] = [
     relatedLinks: [
       { href: "/best-ai-skills-for-coding", label: "Coding skill guide" },
       { href: "/skills/openai-docs", label: "openai-docs skill card" },
+      { href: "/how-to-choose-ai-skills", label: "Skill selection checklist" },
       { href: "/submit", label: "Submit a documentation task" }
     ],
     faqs: [
       {
-        question: "What is the best AI skill for documentation?",
+        question: "What is the best AI documentation skill?",
         answer:
-          "Use a documentation skill that reads the real project context and writes task-based instructions with examples and verification steps."
+          "Use a documentation skill that reads real project context, writes README or API instructions around user tasks, and includes verification steps."
+      },
+      {
+        question: "What should AI documentation include?",
+        answer:
+          "Useful AI documentation should include prerequisites, setup commands, examples, expected output, troubleshooting notes, and a way to verify success."
       },
       {
         question: "Can AI write API docs?",

@@ -15,7 +15,10 @@ const pages = [
       "implement-design skill",
       "AI PRD skill",
       "openai-docs skill",
-      "frontend-design skill"
+      "frontend-design skill",
+      "AI slide deck skill",
+      "AI documentation skill",
+      "marketing-psychology skill"
     ]
   },
   {
@@ -91,6 +94,31 @@ const pages = [
     ]
   },
   {
+    path: "/skills/marketing-psychology",
+    title: "marketing-psychology Skill Review: Persuasion Angles and Campaign Strategy | SkillFit",
+    descriptionIncludes: "Review the marketing-psychology skill",
+    h1: "marketing-psychology Skill Review",
+    bodyIncludes: [
+      "Best fit",
+      "marketing psy skill selection",
+      "What is marketing-psychology best for?"
+    ]
+  },
+  {
+    path: "/skills/powerpoint",
+    title: "PowerPoint Skill Review: Editable PPTX and AI Slide Decks | SkillFit",
+    descriptionIncludes: "Review the PowerPoint skill",
+    h1: "PowerPoint Skill Review",
+    bodyIncludes: ["Best fit", "AI slide decks", "What is PowerPoint best for?"]
+  },
+  {
+    path: "/skills/frontend-slides",
+    title: "frontend-slides Skill Review: Animated HTML Presentations | SkillFit",
+    descriptionIncludes: "Review the frontend-slides skill",
+    h1: "frontend-slides Skill Review",
+    bodyIncludes: ["Best fit", "Animated HTML decks", "What is frontend-slides best for?"]
+  },
+  {
     path: "/best-ai-skills-for-research",
     title: "Best AI Researcher Skills for Web Research | SkillFit",
     descriptionIncludes: "Compare AI researcher skills",
@@ -143,6 +171,28 @@ const pages = [
       "What is the best AI PRD skill?",
       "How do I test an AI product requirements skill?",
       "implement-design skill card"
+    ]
+  },
+  {
+    path: "/best-ai-skill-for-slide-decks",
+    title: "Best AI Slide Deck Skill for Editable Presentations | SkillFit",
+    descriptionIncludes: "Choose an AI slide deck skill",
+    h1: "Best AI Slide Deck Skill for Editable Presentations",
+    bodyIncludes: [
+      "What is the best AI slide deck skill?",
+      "PowerPoint skill card",
+      "frontend-slides skill card"
+    ]
+  },
+  {
+    path: "/best-ai-skill-for-documentation",
+    title: "Best AI Documentation Skill for README and API Docs | SkillFit",
+    descriptionIncludes: "Pick an AI documentation skill",
+    h1: "Best AI Documentation Skill for README and API Docs",
+    bodyIncludes: [
+      "What is the best AI documentation skill?",
+      "What should AI documentation include?",
+      "openai-docs skill card"
     ]
   },
   {
@@ -224,6 +274,17 @@ const pages = [
     descriptionIncludes: "Browse AI skill use cases",
     h1: "Choose by job-to-be-done, not by marketplace rank.",
     bodyIncludes: ["What is an AI skill use case?", "Best Skill for Frontend Landing Page"]
+  },
+  {
+    path: "/use-cases/best-skill-for-presentation-generation",
+    title: "Best AI Skill for Presentation Generation and Slide Decks | SkillFit",
+    descriptionIncludes: "Compare AI presentation generation skills",
+    h1: "Best Skill for Presentation Generation",
+    bodyIncludes: [
+      "What is the best AI skill for presentation generation?",
+      "PowerPoint Skill Review",
+      "frontend-slides Skill Review"
+    ]
   },
   {
     path: "/arena",

@@ -225,6 +225,11 @@ export const useCases: UseCase[] = [
     shortTitle: "Presentation generation",
     description:
       "Find a Skill that can turn messy notes into a coherent, editable deck or web presentation.",
+    seoTitle: "Best AI Skill for Presentation Generation and Slide Decks",
+    seoDescription:
+      "Compare AI presentation generation skills for slide decks, editable PowerPoint, web presentations, narrative structure, and export workflows.",
+    answer:
+      "Use PowerPoint when the final deck must be editable PPTX; use frontend-slides when browser-based animation and web delivery matter.",
     userIntent: "I need slides that tell a clear story and can be edited later.",
     requiredCapabilities: [
       "Narrative structure",
@@ -246,7 +251,29 @@ export const useCases: UseCase[] = [
       ],
       failureSignals: ["Too many words per slide", "Generic templates", "No narrative arc"]
     },
-    keywords: ["presentation skill", "AI deck skill", "PowerPoint agent skill"]
+    keywords: ["presentation skill", "AI deck skill", "PowerPoint agent skill"],
+    relatedLinks: [
+      { href: "/best-ai-skill-for-slide-decks", label: "AI slide deck skill guide" },
+      { href: "/skills/powerpoint", label: "PowerPoint Skill Review" },
+      { href: "/skills/frontend-slides", label: "frontend-slides Skill Review" }
+    ],
+    faqs: [
+      {
+        question: "What is the best AI skill for presentation generation?",
+        answer:
+          "Use a slide deck skill that creates the storyline before slides, keeps text density low, and outputs editable PowerPoint or web presentation files."
+      },
+      {
+        question: "Should I use PowerPoint or frontend-slides?",
+        answer:
+          "Use PowerPoint when stakeholders need editable PPTX files. Use frontend-slides when animation, browser playback, or web-native delivery matters more."
+      },
+      {
+        question: "How do I test an AI slide deck skill?",
+        answer:
+          "Give it messy notes, require a 7-slide outline, check whether each slide has one job, then verify that the export can be edited."
+      }
+    ]
   }
 ];
 
@@ -441,15 +468,51 @@ export const skills: Skill[] = [
   {
     slug: "marketing-psychology",
     name: "marketing-psychology",
-    tagline: "Applies behavioral science and mental models to marketing.",
+    tagline:
+      "marketing-psychology skill for persuasion angles, user motivation, campaign strategy, and stronger hooks.",
+    seoTitle: "marketing-psychology Skill Review: Persuasion Angles and Campaign Strategy",
+    seoDescription:
+      "Review the marketing-psychology skill for persuasion angles, user motivation, campaign strategy, WeChat article hooks, and marketing message critique.",
     category: "Strategy",
     platform: "Codex Skill",
     sourceUrl: "/submit",
     installCommand: "Submit source link to verify",
     evidenceLevel: "C",
     safetyLevel: "low",
-    bestFor: ["Persuasion angles", "User motivation", "Campaign strategy"],
+    bestFor: ["marketing psy skill selection", "Persuasion angles", "User motivation"],
     notFor: ["Raw factual research"],
+    audienceNotes: [
+      "Creators improving hooks, framing, and reader motivation after the factual draft exists",
+      "Founders and PMs checking whether a landing page or WeChat article has a clear persuasion path",
+      "Teams using copywriting first and marketing-psychology as the second-pass strategy layer"
+    ],
+    evidenceNotes: [
+      "Search Console is already showing impressions for marketing psy skill queries.",
+      "The skill should be evaluated on whether it makes the audience, objection, motivation, and call to action more specific."
+    ],
+    safetyNotes: [
+      "Use it for positioning and motivation, not for inventing proof points or manipulating high-stakes decisions.",
+      "Pair with web-access or source review when claims, numbers, or current market facts matter."
+    ],
+    usagePrompt:
+      "Review this launch page or WeChat article draft. Identify the target reader, main motivation, likely objection, persuasion gap, and the three highest-leverage copy changes.",
+    faqs: [
+      {
+        question: "What is marketing-psychology best for?",
+        answer:
+          "marketing-psychology is best for persuasion angles, user motivation, campaign strategy, hooks, objections, and message critique after the factual draft exists."
+      },
+      {
+        question: "Should I use marketing-psychology or copywriting?",
+        answer:
+          "Use copywriting to produce or rewrite the text. Use marketing-psychology as a second pass when the message needs sharper motivation, objections, hooks, or positioning."
+      },
+      {
+        question: "How do I test a marketing psychology skill?",
+        answer:
+          "Give it one page or article draft and ask for the target reader, motivation, objection, persuasion gap, and three concrete rewrites."
+      }
+    ],
     fitMap: [
       {
         useCaseSlug: "best-skill-for-wechat-article-rewrite",
@@ -621,15 +684,50 @@ export const skills: Skill[] = [
   {
     slug: "powerpoint",
     name: "PowerPoint",
-    tagline: "Creates, edits, renders, verifies, and exports PowerPoint decks.",
+    tagline: "PowerPoint skill for editable PPTX slide decks, presentation generation, rendering, and export workflows.",
+    seoTitle: "PowerPoint Skill Review: Editable PPTX and AI Slide Decks",
+    seoDescription:
+      "Review the PowerPoint skill for AI slide decks, editable PPTX generation, presentation rendering, export workflows, and deck verification.",
     category: "Slides",
     platform: "Codex Skill",
     sourceUrl: "/submit",
     installCommand: "Requires local presentation tooling",
     evidenceLevel: "B",
     safetyLevel: "medium",
-    bestFor: ["Editable PPTX", "Slide decks", "Export workflows"],
+    bestFor: ["Editable PPTX", "AI slide decks", "Export workflows"],
     notFor: ["Pure web presentations"],
+    audienceNotes: [
+      "Teams that need editable PowerPoint files instead of static slide images",
+      "Founders and PMs turning product notes into review decks, launch decks, or investor-style narratives",
+      "Operators who need rendering, export, and verification around presentation files"
+    ],
+    evidenceNotes: [
+      "Search Console is showing near-page-one impressions for slide deck and presentation generation pages.",
+      "The skill should be evaluated on editability, slide hierarchy, export reliability, and whether the deck tells a coherent story."
+    ],
+    safetyNotes: [
+      "Check exported files manually before sending to customers, investors, or executives.",
+      "Use brand-guidelines when strict brand compliance matters."
+    ],
+    usagePrompt:
+      "Turn these messy product notes into a 7-slide editable PowerPoint deck. Include a storyline, slide titles, concise bullets, speaker intent, and export verification steps.",
+    faqs: [
+      {
+        question: "What is PowerPoint best for?",
+        answer:
+          "PowerPoint is best for editable PPTX slide decks, presentation generation, deck rendering, export workflows, and files that stakeholders need to revise."
+      },
+      {
+        question: "Should I use PowerPoint or frontend-slides?",
+        answer:
+          "Use PowerPoint when editable PPTX is required. Use frontend-slides when the presentation should be web-native, animated, or browser-delivered."
+      },
+      {
+        question: "How do I test a PowerPoint skill?",
+        answer:
+          "Give it rough notes, require a short deck structure, export the file, then verify editability, readability, and whether each slide has one clear job."
+      }
+    ],
     fitMap: [
       {
         useCaseSlug: "best-skill-for-presentation-generation",
@@ -641,15 +739,50 @@ export const skills: Skill[] = [
   {
     slug: "frontend-slides",
     name: "frontend-slides",
-    tagline: "Creates animation-rich HTML presentations.",
+    tagline: "frontend-slides skill for web presentations, animated HTML decks, browser delivery, and launch talks.",
+    seoTitle: "frontend-slides Skill Review: Animated HTML Presentations",
+    seoDescription:
+      "Review the frontend-slides skill for animated HTML presentations, web decks, browser-based talks, pitch pages, and launch storytelling.",
     category: "Slides",
     platform: "Codex Skill",
     sourceUrl: "/submit",
     installCommand: "Submit source link to verify",
     evidenceLevel: "C",
     safetyLevel: "low",
-    bestFor: ["Web decks", "Pitch pages", "Animated talks"],
+    bestFor: ["Web presentations", "Animated HTML decks", "Pitch pages"],
     notFor: ["Corporate PPTX-only workflows"],
+    audienceNotes: [
+      "Creators and builders presenting a product story in the browser",
+      "Teams that want animation-rich web decks instead of static PowerPoint files",
+      "Speakers who need a launch talk, demo narrative, or pitch page"
+    ],
+    evidenceNotes: [
+      "frontend-slides should be judged on narrative clarity, responsive slide framing, animation quality, and browser playback reliability.",
+      "Pair with PowerPoint when stakeholders also need an editable PPTX deliverable."
+    ],
+    safetyNotes: [
+      "Verify readability on projector and mobile viewports before presenting.",
+      "Avoid it when a corporate workflow requires editable PPTX as the final artifact."
+    ],
+    usagePrompt:
+      "Create an animated HTML presentation from these launch notes. Build a clear storyline, readable sections, restrained motion, and browser-ready delivery.",
+    faqs: [
+      {
+        question: "What is frontend-slides best for?",
+        answer:
+          "frontend-slides is best for animated HTML presentations, web decks, pitch pages, browser-based talks, and launch storytelling."
+      },
+      {
+        question: "Should I use frontend-slides or PowerPoint?",
+        answer:
+          "Use frontend-slides for web-native delivery and animation. Use PowerPoint when the final artifact must be editable PPTX."
+      },
+      {
+        question: "How do I test frontend-slides?",
+        answer:
+          "Give it launch notes, require a browser presentation, then verify responsive framing, readability, motion, and whether the story is clear."
+      }
+    ],
     fitMap: [
       {
         useCaseSlug: "best-skill-for-presentation-generation",
