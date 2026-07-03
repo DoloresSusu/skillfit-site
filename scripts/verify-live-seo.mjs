@@ -12,7 +12,21 @@ const pages = [
       "AI competitor gap analysis agent",
       "AI writing skills",
       "AI coding skills",
-      "implement-design skill"
+      "implement-design skill",
+      "AI PRD skill",
+      "openai-docs skill",
+      "frontend-design skill"
+    ]
+  },
+  {
+    path: "/about",
+    title: "About SkillFit: AI Skill Finder and Task-Fit Directory | SkillFit",
+    descriptionIncludes: "Learn why SkillFit is an AI skill finder",
+    h1: "About SkillFit: an AI skill finder for task fit.",
+    bodyIncludes: [
+      "What is SkillFit?",
+      "Browse the AI skill directory",
+      "Compare skill marketplace options"
     ]
   },
   {
@@ -44,6 +58,17 @@ const pages = [
     bodyIncludes: ["Best fit", "UI UX Pro Max skill selection", "When should I use ui-ux-pro-max"]
   },
   {
+    path: "/skills/frontend-design",
+    title: "frontend-design Skill Review: AI Frontend Design and Landing Pages | SkillFit",
+    descriptionIncludes: "Review the frontend-design skill",
+    h1: "frontend-design Skill Review",
+    bodyIncludes: [
+      "Best fit",
+      "frontend design skill selection",
+      "What is frontend-design best for?"
+    ]
+  },
+  {
     path: "/skills/implement-design",
     title: "implement-design Skill Review: Figma to Code and Design Implementation | SkillFit",
     descriptionIncludes: "Review the implement-design skill",
@@ -52,6 +77,17 @@ const pages = [
       "Best fit",
       "Design implementation",
       "What is implement-design best for?"
+    ]
+  },
+  {
+    path: "/skills/openai-docs",
+    title: "openai-docs Skill Review: Official OpenAI Docs and API Help | SkillFit",
+    descriptionIncludes: "Review the openai-docs skill",
+    h1: "openai-docs Skill Review",
+    bodyIncludes: [
+      "Best fit",
+      "OpenAI docs lookup",
+      "What is openai-docs best for?"
     ]
   },
   {
@@ -96,6 +132,17 @@ const pages = [
     bodyIncludes: [
       "How do I validate an AI skill before using it?",
       "AI skill marketplace list"
+    ]
+  },
+  {
+    path: "/best-ai-skill-for-product-requirements",
+    title: "Best AI PRD Skill for Product Requirements | SkillFit",
+    descriptionIncludes: "Choose an AI PRD skill",
+    h1: "Best AI PRD Skill for Product Requirements",
+    bodyIncludes: [
+      "What is the best AI PRD skill?",
+      "How do I test an AI product requirements skill?",
+      "implement-design skill card"
     ]
   },
   {

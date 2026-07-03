@@ -53,6 +53,21 @@ const highIntentPaths = [
     description: "Pick a skill for competitor discovery, positioning evidence, and market gaps."
   },
   {
+    href: "/best-ai-skill-for-product-requirements",
+    label: "AI PRD skill",
+    description: "Turn product ideas into PRDs, user stories, scope, and acceptance criteria."
+  },
+  {
+    href: "/skills/openai-docs",
+    label: "openai-docs skill",
+    description: "Use official OpenAI docs for API behavior, SDK guidance, and model questions."
+  },
+  {
+    href: "/skills/frontend-design",
+    label: "frontend-design skill",
+    description: "Review landing pages, web UI, visual direction, and responsive layouts."
+  },
+  {
     href: "/arena/frontend-design-vs-ui-ux-pro-max-landing-page",
     label: "frontend-design vs ui-ux-pro-max",
     description: "Compare visual direction against broader UX critique for landing pages."

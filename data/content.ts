@@ -254,18 +254,50 @@ export const skills: Skill[] = [
   {
     slug: "frontend-design",
     name: "frontend-design",
-    tagline: "Creates distinctive, production-grade frontend interfaces.",
-    seoTitle: "frontend-design Skill Review for AI Frontend Design",
+    tagline: "frontend-design skill for landing pages, web UI, visual direction, and responsive frontend layouts.",
+    seoTitle: "frontend-design Skill Review: AI Frontend Design and Landing Pages",
     seoDescription:
-      "Review the frontend-design skill for landing pages, web UI, visual direction, responsive layout, and task-fit frontend design work.",
+      "Review the frontend-design skill for AI frontend design, landing pages, web UI, visual direction, responsive layout, and task-fit design work.",
     category: "Design & frontend",
     platform: "Codex Skill",
     sourceUrl: "/submit",
     installCommand: "Submit source link to verify",
     evidenceLevel: "B",
     safetyLevel: "low",
-    bestFor: ["Landing pages", "Web UI", "Visual direction"],
+    bestFor: ["frontend design skill selection", "Landing pages", "Web UI"],
     notFor: ["Backend-only work", "Pixel-perfect Figma execution"],
+    audienceNotes: [
+      "Founders and builders who need a shippable landing page concept before implementation",
+      "PMs comparing frontend-design, ui-ux-pro-max, and implement-design for a web UI task",
+      "Teams that need visual hierarchy, responsive layout, and credible first-screen copy"
+    ],
+    evidenceNotes: [
+      "Search Console is already showing impressions for frontend design, frontend design skill, and frontend-design skill queries.",
+      "The strongest validation should come from before/after landing pages, responsive screenshots, and measurable first-screen clarity improvements."
+    ],
+    safetyNotes: [
+      "Visual design output still needs accessibility, brand, and production QA before launch.",
+      "Use implement-design instead when the job is reproducing an existing Figma or screenshot with high fidelity."
+    ],
+    usagePrompt:
+      "Create a production-grade landing page concept for this AI tool. Prioritize first-screen clarity, responsive layout, credible copy, visual hierarchy, and a concise CTA. Explain when ui-ux-pro-max or implement-design would be a better follow-up.",
+    faqs: [
+      {
+        question: "What is frontend-design best for?",
+        answer:
+          "frontend-design is best for AI frontend design, landing pages, web UI concepts, responsive layouts, and visual direction when a new page needs to feel shippable."
+      },
+      {
+        question: "Should I use frontend-design or ui-ux-pro-max?",
+        answer:
+          "Use frontend-design when you need a new visual direction or landing page concept. Use ui-ux-pro-max when the page already exists and needs structured UX critique."
+      },
+      {
+        question: "Should I use frontend-design or implement-design?",
+        answer:
+          "Use frontend-design for open-ended page creation. Use implement-design when a Figma file, screenshot, or reference UI already exists and fidelity is the main requirement."
+      }
+    ],
     fitMap: [
       {
         useCaseSlug: "best-skill-for-frontend-landing-page",
@@ -509,15 +541,50 @@ export const skills: Skill[] = [
   {
     slug: "openai-docs",
     name: "openai-docs",
-    tagline: "Finds up-to-date official OpenAI product and API documentation.",
+    tagline: "openai-docs skill for official OpenAI docs, API references, model behavior, and SDK guidance.",
+    seoTitle: "openai-docs Skill Review: Official OpenAI Docs and API Help",
+    seoDescription:
+      "Review the openai-docs skill for official OpenAI documentation, API references, model behavior, SDK guidance, and current implementation answers.",
     category: "Technical docs",
     platform: "Codex Skill",
     sourceUrl: "/submit",
     installCommand: "Submit source link to verify",
     evidenceLevel: "B",
     safetyLevel: "low",
-    bestFor: ["OpenAI API questions", "Model selection", "Official docs"],
+    bestFor: ["OpenAI docs lookup", "OpenAI API questions", "Model selection"],
     notFor: ["Non-OpenAI product research"],
+    audienceNotes: [
+      "Developers checking current OpenAI API behavior before coding",
+      "AI builders comparing model capabilities, SDK examples, or migration details",
+      "Reviewers who need official documentation instead of stale blog summaries"
+    ],
+    evidenceNotes: [
+      "Search Console is already showing impressions for openai docs, open ai docs, and open ai documentation queries.",
+      "The skill should be evaluated on whether it cites official OpenAI pages and distinguishes current documentation from memory."
+    ],
+    safetyNotes: [
+      "For OpenAI product behavior, rely on official docs and verify against the live API when the answer affects production code.",
+      "Do not use it for unrelated product research where broader web-access discovery is required."
+    ],
+    usagePrompt:
+      "Answer this OpenAI API implementation question using official OpenAI documentation only. Link the relevant docs, quote the key constraint in your own words, and state what still needs to be tested in code.",
+    faqs: [
+      {
+        question: "What is openai-docs best for?",
+        answer:
+          "openai-docs is best for official OpenAI documentation lookup, API behavior, SDK usage, model capability checks, and current implementation answers."
+      },
+      {
+        question: "Should I use openai-docs or web-access?",
+        answer:
+          "Use openai-docs when the answer should come from official OpenAI docs. Use web-access when the task needs broader current web research, competitor pages, or non-OpenAI sources."
+      },
+      {
+        question: "How should I test openai-docs?",
+        answer:
+          "Ask a concrete API question, require official docs links, then verify whether the cited page actually supports the implementation recommendation."
+      }
+    ],
     fitMap: [
       {
         useCaseSlug: "best-skill-for-research-report",

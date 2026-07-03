@@ -493,12 +493,12 @@ export const seoGuides: SeoGuide[] = [
   {
     slug: "best-ai-skill-for-product-requirements",
     path: "/best-ai-skill-for-product-requirements",
-    title: "Best AI Skill for Product Requirements",
-    shortTitle: "Product requirements",
+    title: "Best AI PRD Skill for Product Requirements",
+    shortTitle: "AI PRD Skill",
     description:
-      "Pick an AI skill that turns rough product ideas into clear PRDs, user stories, constraints, and testable acceptance criteria.",
+      "Choose an AI PRD skill for product requirements, user stories, MVP scope, non-goals, edge cases, and testable acceptance criteria.",
     answer:
-      "The best AI skill for product requirements is one that clarifies the user job, narrows scope, identifies edge cases, and produces acceptance criteria engineers can actually use.",
+      "The best AI PRD skill for product requirements clarifies the user job, narrows scope, identifies edge cases, and produces acceptance criteria engineers can actually use.",
     audience: [
       "PMs writing a first PRD from messy notes",
       "Founders turning an MVP idea into buildable scope",
@@ -535,9 +535,16 @@ export const seoGuides: SeoGuide[] = [
     relatedLinks: [
       { href: "/how-to-choose-ai-skills", label: "Skill selection checklist" },
       { href: "/use-cases/best-skill-for-frontend-landing-page", label: "Landing page use case" },
+      { href: "/best-ai-skills-for-coding", label: "AI coding skills guide" },
+      { href: "/skills/implement-design", label: "implement-design skill card" },
       { href: "/submit", label: "Submit a PRD task" }
     ],
     faqs: [
+      {
+        question: "What is the best AI PRD skill?",
+        answer:
+          "Use an AI PRD skill that turns a rough idea into product requirements, MVP scope, non-goals, user stories, edge cases, and acceptance criteria."
+      },
       {
         question: "Can an AI skill write a PRD?",
         answer:
@@ -552,6 +559,11 @@ export const seoGuides: SeoGuide[] = [
         question: "Should a PRD skill include technical details?",
         answer:
           "For MVP work, it should include implementation constraints and data needs, but avoid over-specifying architecture too early."
+      },
+      {
+        question: "How do I test an AI product requirements skill?",
+        answer:
+          "Give it one messy product idea, require non-goals and edge cases, then check whether a coding agent could implement the output without guessing."
       }
     ]
   },
