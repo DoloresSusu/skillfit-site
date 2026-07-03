@@ -40,6 +40,9 @@ export type UseCase = {
   title: string;
   shortTitle: string;
   description: string;
+  seoTitle?: string;
+  seoDescription?: string;
+  answer?: string;
   userIntent: string;
   requiredCapabilities: string[];
   recommendedSkills: string[];
@@ -51,6 +54,14 @@ export type UseCase = {
     failureSignals: string[];
   };
   keywords: string[];
+  relatedLinks?: Array<{
+    href: string;
+    label: string;
+  }>;
+  faqs?: Array<{
+    question: string;
+    answer: string;
+  }>;
 };
 
 export type Arena = {

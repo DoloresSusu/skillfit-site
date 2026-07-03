@@ -7,6 +7,11 @@ export const useCases: UseCase[] = [
     shortTitle: "Frontend landing page",
     description:
       "Find a Skill that can turn a product idea into a polished, responsive landing page with credible copy and visual hierarchy.",
+    seoTitle: "Best AI Skill for Frontend Landing Pages",
+    seoDescription:
+      "Compare frontend-design, ui-ux-pro-max, and implement-design for AI landing page design, frontend UI, responsive layout, and conversion copy.",
+    answer:
+      "Use frontend-design when you need a polished first version, ui-ux-pro-max when the main risk is UX quality, and implement-design when you already have a Figma source to reproduce.",
     userIntent: "I need a launch-ready landing page, not just generic component code.",
     requiredCapabilities: [
       "Strong visual direction",
@@ -37,7 +42,33 @@ export const useCases: UseCase[] = [
         "No responsive behavior"
       ]
     },
-    keywords: ["frontend skill", "landing page skill", "ai web design skill"]
+    keywords: ["frontend skill", "landing page skill", "ai web design skill"],
+    relatedLinks: [
+      {
+        href: "/arena/frontend-design-vs-ui-ux-pro-max-landing-page",
+        label: "frontend-design vs ui-ux-pro-max arena"
+      },
+      { href: "/skills/frontend-design", label: "frontend-design Skill Review" },
+      { href: "/skills/ui-ux-pro-max", label: "ui-ux-pro-max Skill Review" },
+      { href: "/best-ai-skill-for-ui-design", label: "AI UI design skill guide" }
+    ],
+    faqs: [
+      {
+        question: "What is the best AI skill for a frontend landing page?",
+        answer:
+          "frontend-design is the strongest first choice when you need visual direction, responsive layout, and a shippable landing page concept."
+      },
+      {
+        question: "Should I use frontend-design or ui-ux-pro-max?",
+        answer:
+          "Use frontend-design for a new page concept. Use ui-ux-pro-max when you already have a page or flow and need structured UX critique."
+      },
+      {
+        question: "When is implement-design the better choice?",
+        answer:
+          "Use implement-design when a Figma or visual source already exists and the job is fidelity, component structure, and implementation handoff."
+      }
+    ]
   },
   {
     slug: "best-skill-for-wechat-article-rewrite",
@@ -45,6 +76,11 @@ export const useCases: UseCase[] = [
     shortTitle: "WeChat article insights",
     description:
       "Choose a Skill that can transform source material into Chinese WeChat article insights, structure, judgment, and less AI flavor.",
+    seoTitle: "Best AI Skill for WeChat Article Insights",
+    seoDescription:
+      "Choose a WeChat article insights skill for Chinese article rewrite, source fidelity, publishable structure, headlines, and point-of-view editing.",
+    answer:
+      "Use a copywriting skill for the publishable rewrite, then add marketing-psychology when the WeChat article needs a sharper hook, reader motivation, and stronger editorial angle.",
     userIntent:
       "I want publishable Chinese content and WeChat article insights with point of view, not a literal summary.",
     requiredCapabilities: [
@@ -72,6 +108,29 @@ export const useCases: UseCase[] = [
       "wechat writing skill",
       "chinese rewrite skill",
       "公众号改写 skill"
+    ],
+    relatedLinks: [
+      { href: "/best-ai-skills-for-writing", label: "AI writing skill guide" },
+      { href: "/arena/copywriting-vs-marketing-psychology-wechat", label: "WeChat rewrite arena" },
+      { href: "/skills/copywriting", label: "copywriting Skill Review" },
+      { href: "/skills/marketing-psychology", label: "marketing-psychology Skill Review" }
+    ],
+    faqs: [
+      {
+        question: "What is a WeChat article insights skill?",
+        answer:
+          "It is an AI skill for turning source material into a Chinese WeChat article with useful insights, structure, headlines, and editorial judgment."
+      },
+      {
+        question: "What makes a WeChat rewrite useful?",
+        answer:
+          "A useful rewrite keeps source meaning, adds a clear Chinese framing, avoids invented facts, and sounds publishable rather than machine-translated."
+      },
+      {
+        question: "Which skills should I compare for WeChat article insights?",
+        answer:
+          "Compare copywriting for sentence-level and structural polish, marketing-psychology for hook and persuasion angle, and web-access when the article needs current source checks."
+      }
     ]
   },
   {
@@ -80,6 +139,11 @@ export const useCases: UseCase[] = [
     shortTitle: "Research report",
     description:
       "Find a Skill that can gather sources, separate evidence from opinion, and produce a decision-ready research memo.",
+    seoTitle: "Best AI Skill for Research Reports",
+    seoDescription:
+      "Choose an AI research report skill for web research, source attribution, competitor analysis, evidence synthesis, and decision-ready memos.",
+    answer:
+      "Use web-access when freshness, citations, and competitor discovery matter; pair it with an official docs skill when the research depends on primary product or API documentation.",
     userIntent: "I need a structured answer with sources, uncertainty, and recommendations.",
     requiredCapabilities: [
       "Web research",
@@ -101,7 +165,30 @@ export const useCases: UseCase[] = [
       ],
       failureSignals: ["No source links", "Overgeneralized claims", "Outdated facts"]
     },
-    keywords: ["research skill", "web research agent skill", "competitive analysis skill"]
+    keywords: ["research skill", "web research agent skill", "competitive analysis skill"],
+    relatedLinks: [
+      { href: "/best-ai-skills-for-research", label: "Best AI researcher skills" },
+      { href: "/best-ai-skill-for-competitive-analysis", label: "Competitor analysis skill guide" },
+      { href: "/skills/web-access", label: "web-access Skill Review" },
+      { href: "/arena/web-access-vs-openai-docs-research-report", label: "web-access vs openai-docs arena" }
+    ],
+    faqs: [
+      {
+        question: "What is the best AI skill for a research report?",
+        answer:
+          "web-access is the best first choice when the report needs current sources, competitor discovery, citations, and uncertainty handling."
+      },
+      {
+        question: "How should I test an AI research skill?",
+        answer:
+          "Give it a current topic, require source links, ask it to separate facts from interpretation, then verify whether the recommendation follows from the cited evidence."
+      },
+      {
+        question: "When should I use an official docs skill instead?",
+        answer:
+          "Use an official docs skill when the answer depends on primary documentation such as API behavior, model availability, or product instructions."
+      }
+    ]
   },
   {
     slug: "best-skill-for-code-review",
@@ -672,14 +759,49 @@ export const skills: Skill[] = [
     slug: "lark-minutes",
     name: "lark-minutes",
     tagline: "Fetches Feishu/Lark meeting minute summaries and artifacts.",
+    seoTitle: "lark-minutes Skill Review: Lark Meeting Minutes and Action Items",
+    seoDescription:
+      "Review the lark-minutes skill for Feishu/Lark meeting summaries, chapters, action items, minute artifacts, and follow-up workflows.",
     category: "Meeting intelligence",
     platform: "Codex Skill",
     sourceUrl: "/submit",
     installCommand: "Requires Lark minutes access",
     evidenceLevel: "C",
     safetyLevel: "medium",
-    bestFor: ["Meeting summaries", "Chapters", "Action items"],
-    notFor: ["Live transcription"],
+    bestFor: ["Lark meeting minutes", "Meeting summaries", "Action items"],
+    notFor: ["Live transcription", "Non-Lark meeting archives", "Private meetings without permission"],
+    audienceNotes: [
+      "Operators who need follow-up tasks from Lark meeting minutes",
+      "Teams turning meeting artifacts into summaries, chapters, and action lists",
+      "Founders reviewing decisions after recorded Feishu/Lark meetings"
+    ],
+    evidenceNotes: [
+      "Search Console is already showing this page near the first page, but the old snippet was too generic for Lark minutes intent.",
+      "The strongest proof should come from a meeting-to-summary test with chapters, owners, and follow-up actions."
+    ],
+    safetyNotes: [
+      "Meeting minutes can contain private company and customer information.",
+      "Only use the skill with an authenticated workspace and explicit permission to access the meeting artifact."
+    ],
+    usagePrompt:
+      "Fetch the latest Lark meeting minute summary, list decisions, owners, unresolved questions, and the next follow-up message I should send.",
+    faqs: [
+      {
+        question: "What is lark-minutes best for?",
+        answer:
+          "lark-minutes is best for fetching Feishu/Lark meeting minute summaries, chapters, action items, and follow-up artifacts."
+      },
+      {
+        question: "Can lark-minutes transcribe a live meeting?",
+        answer:
+          "No. Treat it as a meeting artifact retrieval and summary workflow, not a live transcription skill."
+      },
+      {
+        question: "What should I check before using lark-minutes?",
+        answer:
+          "Check workspace authentication, meeting access permission, privacy sensitivity, and whether the output includes owners and next actions."
+      }
+    ],
     fitMap: []
   },
   {

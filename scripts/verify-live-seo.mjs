@@ -49,6 +49,30 @@ const pages = [
     descriptionIncludes: "AI competitor gap analysis agent skill",
     h1: "Best AI Competitor Gap Analysis Agent Skill",
     bodyIncludes: ["What is an AI competitor gap analysis agent?", "web-access skill card"]
+  },
+  {
+    path: "/use-cases/best-skill-for-wechat-article-rewrite",
+    title: "Best AI Skill for WeChat Article Insights | SkillFit",
+    descriptionIncludes: "WeChat article insights skill",
+    h1: "Best Skill for WeChat Article Rewrite and Insights",
+    bodyIncludes: ["What is a WeChat article insights skill?", "WeChat rewrite arena"]
+  },
+  {
+    path: "/use-cases/best-skill-for-frontend-landing-page",
+    title: "Best AI Skill for Frontend Landing Pages | SkillFit",
+    descriptionIncludes: "Compare frontend-design, ui-ux-pro-max, and implement-design",
+    h1: "Best Skill for Frontend Landing Page",
+    bodyIncludes: [
+      "frontend-design vs ui-ux-pro-max",
+      "What is the best AI skill for a frontend landing page?"
+    ]
+  },
+  {
+    path: "/skills/lark-minutes",
+    title: "lark-minutes Skill Review: Lark Meeting Minutes and Action Items | SkillFit",
+    descriptionIncludes: "Review the lark-minutes skill",
+    h1: "lark-minutes Skill Review",
+    bodyIncludes: ["Lark meeting minutes", "What is lark-minutes best for?"]
   }
 ];
 
@@ -124,6 +148,20 @@ assertContains({
   label: "sitemap",
   actual: sitemap,
   expected: "2026-07-03",
+  errors
+});
+
+const llmsTxt = await fetchText("/llms.txt");
+assertContains({
+  label: "llms.txt",
+  actual: llmsTxt,
+  expected: "web-access Skill Review",
+  errors
+});
+assertContains({
+  label: "llms.txt",
+  actual: llmsTxt,
+  expected: "AI Skill Marketplace List",
   errors
 });
 

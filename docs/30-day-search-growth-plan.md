@@ -283,6 +283,10 @@ Production is not updated until all of these are true:
 - `npm run verify:live-seo` passes against `https://get-skill-fit.com`.
 - The homepage contains `High-intent searches`.
 - `/skills/web-access` has the title `web-access Skill Review: Live Web Research and Dynamic Pages | SkillFit`.
+- `/use-cases/best-skill-for-wechat-article-rewrite` has the title `Best AI Skill for WeChat Article Insights | SkillFit`.
+- `/use-cases/best-skill-for-frontend-landing-page` has the title `Best AI Skill for Frontend Landing Pages | SkillFit`.
+- `/skills/lark-minutes` has the title `lark-minutes Skill Review: Lark Meeting Minutes and Action Items | SkillFit`.
+- `/llms.txt` returns a plain-text SkillFit index with priority pages and skill reviews.
 - `/sitemap.xml` has a `2026-07-03` or later `lastmod`.
 
 Current blocker found on 2026-07-03:
@@ -316,10 +320,14 @@ Shipped in the current local change set:
 - `web-access`, `ui-ux-pro-max`, `frontend-design`, and `implement-design` have stronger query-matched skill metadata.
 - Research, marketplace, competitive-analysis, UI-design, and WeChat use-case content now includes language from actual GSC query clusters.
 - PostHog events now include referrer, referrer domain, UTM fields, landing path, current path, page type, internal target path, link text, and scroll-depth events.
+- Use-case detail pages now include canonical URLs, OpenGraph metadata, Article JSON-LD, recommended-skill ItemList JSON-LD, FAQPage JSON-LD, BreadcrumbList JSON-LD, short-answer boxes, and tracked related links.
+- The two GSC quick-win use cases now have exact-intent snippets and FAQ sections: `WeChat article insights` and `AI landing page skill`.
+- `lark-minutes` now targets `Lark meeting minutes`, meeting summaries, chapters, action items, and follow-up workflows instead of a generic meeting-intelligence snippet.
+- `/llms.txt` now exists and lists priority pages, use cases, skill reviews, guides, and arena comparisons for AI crawlers and answer engines.
 
 Still needs deployment and external verification:
 
 - Deploy to production.
 - Submit `https://get-skill-fit.com/sitemap.xml` in Search Console.
-- Request indexing for `/`, `/skills`, `/skills/web-access`, `/skills/ui-ux-pro-max`, and `/best-ai-skills-for-research`.
+- Request indexing for `/`, `/skills`, `/skills/web-access`, `/skills/ui-ux-pro-max`, `/skills/lark-minutes`, `/best-ai-skills-for-research`, `/use-cases/best-skill-for-wechat-article-rewrite`, and `/use-cases/best-skill-for-frontend-landing-page`.
 - Check GSC on 2026-07-10, 2026-07-17, 2026-07-24, and 2026-08-03.

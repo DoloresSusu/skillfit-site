@@ -46,6 +46,16 @@ const highIntentPaths = [
     href: "/arena/frontend-design-vs-ui-ux-pro-max-landing-page",
     label: "frontend-design vs ui-ux-pro-max",
     description: "Compare visual direction against broader UX critique for landing pages."
+  },
+  {
+    href: "/use-cases/best-skill-for-wechat-article-rewrite",
+    label: "WeChat article insights",
+    description: "Pick a skill for Chinese article rewrites, insights, headlines, and source fidelity."
+  },
+  {
+    href: "/use-cases/best-skill-for-frontend-landing-page",
+    label: "AI landing page skill",
+    description: "Compare frontend-design, ui-ux-pro-max, and implement-design for page launches."
   }
 ];
 

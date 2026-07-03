@@ -9,7 +9,13 @@ export const metadata: Metadata = {
     "Browse an AI skill directory with task fit, supported workflows, safety notes, evidence levels, and 10-minute validation prompts."
 };
 
-const prioritySkillSlugs = ["web-access", "ui-ux-pro-max", "frontend-design", "implement-design"];
+const prioritySkillSlugs = [
+  "web-access",
+  "lark-minutes",
+  "ui-ux-pro-max",
+  "frontend-design",
+  "implement-design"
+];
 
 export default function SkillsPage() {
   const prioritySkills = prioritySkillSlugs
